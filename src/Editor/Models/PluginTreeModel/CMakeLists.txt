@@ -1,0 +1,1 @@
+target_sources(AwesomeMonitor PUBLIC PluginTreeModel.h PluginTreeModel.cpp)

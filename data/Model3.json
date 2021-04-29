@@ -1,0 +1,1002 @@
+{
+   "windows":[
+      {
+         "_":"Window",
+         "name":"adsdas",
+         "visible":true,
+         "width":350,
+         "height":475,
+         "color":{
+            "type":"color",
+            "value":"#404b5320"
+
+         },
+         "spacing":5,
+         "childern":[
+            {
+               "_":"Column",
+               "name":"adsdas",
+               "spacing":5,
+
+               "topPadding": 15,
+               "anchors.horizontalCenter": {
+                  "type": "bind","value": "return parent.horizontalCenter"
+               },
+               "childern":[
+                  {
+                     "_":"RowLayout",
+                     "name":"adsdas",
+                     "spacing":5,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"System",
+                           "color":{
+                              "type":"color",
+                              "value":"#fc8003"
+                           }
+                        },
+                        {
+                           "_":"Rectangle",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":255,
+                           "height":2,
+                           "color":{
+                              "type":"color",
+                              "value":"#b0aca9"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "spacing":175,
+                     "name":"adsdas",
+                     "height":10,
+                     "anchors.topMargin":0,
+                     "anchors.bottomMargin":0,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "dataModels":{
+                              "valueModel":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"head -1 /etc/manjaro-release",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return value.toString().trim()}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        },
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "dataModels":{
+                              "valueModel":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"uname -m",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return value.toString().trim()}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "spacing":190,
+                     "name":"adsdas",
+                     "height":10,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"AMD Ryzen 5"
+                        },
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "dataModels":{
+                              "valueModel":{
+                                 "_":"SingleCpuCoreMaxFrequencyDataModel",
+                                 "name":"asdasd",
+                                 "acpiId":"0",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return Math.trunc(Number(value)/1000000).toString() + \" Ghz\"}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "spacing":212,
+                     "name":"adsdas",
+                     "height":10,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"FileSystem"
+                        },
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "dataModels":{
+                              "valueModel":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"df -Th | grep \"^/dev/nvme0n1p6\" | awk '{print $2}'",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return  value.toString().trim()}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "spacing":213,
+                     "name":"adsdas",
+                     "height":10,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Uptime"
+                        },
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "dataModels":{
+                              "valueModel":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"awk '{print int($1/3600)\":\"int(($1%3600)/60)\":\"int($1%60)}' /proc/uptime",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return  value.toString().trim()}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "name":"adsdas",
+                     "spacing":5,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Processors",
+                           "color":{
+                              "type":"color",
+                              "value":"#fc8003"
+                           }
+                        },
+                        {
+                           "_":"Rectangle",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":233,
+                           "height":2,
+                           "color":{
+                              "type":"color",
+                              "value":"#b0aca9"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "name":"adsdas",
+                     "height":10,
+                     "dataModels":{
+                        "valueModel":{
+                           "_":"SingleCpuCoreUtilisationDataModel",
+                           "name":"asdasd",
+                           "acpiId":"1",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(\"utilss\",value);return  (Number.isNaN(value)?0:Math.trunc(value * 100))}"
+                           },
+                           "timerInterval":1000
+                        }
+                     },
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Core1"
+                        },
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":{
+                              "type":"bind",
+                              "value":"return parent.dataModels.valueModel.currentValue.toString() + \" %\""
+                           }
+                        },
+                        {
+                           "_":"ProgresBar",
+                           "name":"adsdas",
+                           "implicitWidth":220,
+                           "value":{
+                              "type":"bind",
+                              "value":"console.log(\"progress\",parent.data[2]);return parent.dataModels.valueModel.currentValue/100"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "name":"adsdas",
+                     "height":10,
+                     "dataModels":{
+                        "valueModel":{
+                           "_":"SingleCpuCoreUtilisationDataModel",
+                           "name":"asdasd",
+                           "acpiId":"2",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(\"utilss\",value);return  (Number.isNaN(value)?0:Math.trunc(value * 100))}"
+                           },
+                           "timerInterval":1000
+                        }
+                     },
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Core2"
+                        },
+                        {
+                           "_":"Text",
+                           "width":40,
+                           "name":"adsdas",
+                           "text":{
+                              "type":"bind",
+                              "value":"return parent.dataModels.valueModel.currentValue.toString() + \" %\""
+                           }
+                        },
+                        {
+                           "_":"ProgresBar",
+                           "name":"adsdas",
+                           "implicitWidth":220,
+                           "value":{
+                              "type":"bind",
+                              "value":"console.log(\"progress\",parent.data[2]);return parent.dataModels.valueModel.currentValue/100"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "name":"adsdas",
+                     "height":10,
+                     "dataModels":{
+                        "valueModel":{
+                           "_":"SingleCpuCoreUtilisationDataModel",
+                           "name":"asdasd",
+                           "acpiId":"3",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(\"utilss\",value);return  (Number.isNaN(value)?0:Math.trunc(value * 100))}"
+                           },
+                           "timerInterval":1000
+                        }
+                     },
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Core3"
+                        },
+                        {
+                           "_":"Text",
+                           "width":40,
+                           "name":"adsdas",
+                           "text":{
+                              "type":"bind",
+                              "value":"return parent.dataModels.valueModel.currentValue.toString() + \" %\""
+                           }
+                        },
+                        {
+                           "_":"ProgresBar",
+                           "name":"adsdas",
+                           "implicitWidth":220,
+                           "value":{
+                              "type":"bind",
+                              "value":"console.log(\"progress\",parent.data[2]);return parent.dataModels.valueModel.currentValue/100"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "name":"adsdas",
+                     "height":10,
+                     "dataModels":{
+                        "valueModel":{
+                           "_":"SingleCpuCoreUtilisationDataModel",
+                           "name":"asdasd",
+                           "acpiId":"4",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(\"utilss\",value);return  (Number.isNaN(value)?0:Math.trunc(value * 100))}"
+                           },
+                           "timerInterval":1000
+                        }
+                     },
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Core4"
+                        },
+                        {
+                           "_":"Text",
+                           "width":50,
+                           "name":"adsdas",
+                           "text":{
+                              "type":"bind",
+                              "value":"return parent.dataModels.valueModel.currentValue.toString() + \" %\""
+                           }
+                        },
+                        {
+                           "_":"ProgresBar",
+                           "name":"adsdas",
+                           "implicitWidth":220,
+                           "value":{
+                              "type":"bind",
+                              "value":"console.log(\"progress\",parent.data[2]);return parent.dataModels.valueModel.currentValue/100"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "name":"adsdas",
+                     "spacing":5,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Temperatures",
+                           "color":{
+                              "type":"color",
+                              "value":"#fc8003"
+                           }
+                        },
+                        {
+                           "_":"Rectangle",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":215,
+                           "height":2,
+                           "color":{
+                              "type":"color",
+                              "value":"#b0aca9"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "name":"adsdas",
+                     "height":10,
+                     "spacing":240,
+                     "dataModels":{
+                        "valueModel":{
+                           "_":"SingleCpuCoreTemperatureDataModel",
+                           "name":"asdasd",
+                           "acpiId":"1",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(\"utilss\",value);return Math.trunc(Number(value)/1000).toString() + \" °C\" }"
+                           },
+                           "timerInterval":1000
+                        }
+                     },
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Core1"
+                        },
+                        {
+                           "_":"Text",
+                           "width":50,
+                           "name":"adsdas",
+                           "text":{
+                              "type":"bind",
+                              "value":"return parent.dataModels.valueModel.currentValue"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "name":"adsdas",
+                     "height":10,
+                     "spacing":240,
+                     "dataModels":{
+                        "valueModel":{
+                           "_":"SingleCpuCoreTemperatureDataModel",
+                           "name":"asdasd",
+                           "acpiId":"2",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(\"utilss\",value);return Math.trunc(Number(value)/1000).toString() + \" °C\" }"
+                           },
+                           "timerInterval":1000
+                        }
+                     },
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Core2"
+                        },
+                        {
+                           "_":"Text",
+                           "width":50,
+                           "name":"adsdas",
+                           "text":{
+                              "type":"bind",
+                              "value":"return parent.dataModels.valueModel.currentValue"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "name":"adsdas",
+                     "height":10,
+                     "spacing":240,
+                     "dataModels":{
+                        "valueModel":{
+                           "_":"SingleCpuCoreTemperatureDataModel",
+                           "name":"asdasd",
+                           "acpiId":"3",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(\"utilss\",value);return Math.trunc(Number(value)/1000).toString() + \" °C\" }"
+                           },
+                           "timerInterval":1000
+                        }
+                     },
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Core3"
+                        },
+                        {
+                           "_":"Text",
+                           "width":50,
+                           "name":"adsdas",
+                           "text":{
+                              "type":"bind",
+                              "value":"return parent.dataModels.valueModel.currentValue"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "color":"transparent",
+                     "name":"adsdas",
+                     "height":10,
+                     "spacing":240,
+                     "dataModels":{
+                        "valueModel":{
+                           "_":"SingleCpuCoreTemperatureDataModel",
+                           "name":"asdasd",
+                           "acpiId":"4",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(\"utilss\",value);return Math.trunc(Number(value)/1000).toString() + \" °C\" }"
+                           },
+                           "timerInterval":1000
+                        }
+                     },
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Core4"
+                        },
+                        {
+                           "_":"Text",
+                           "width":50,
+                           "name":"adsdas",
+                           "text":{
+                              "type":"bind",
+                              "value":"return parent.dataModels.valueModel.currentValue"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "_":"RowLayout",
+                     "name":"adsdas",
+                     "spacing":5,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Memory",
+                           "color":{
+                              "type":"color",
+                              "value":"#fc8003"
+                           }
+                        },
+                        {
+                           "_":"Rectangle",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":248,
+                           "height":2,
+                           "color":{
+                              "type":"color",
+                              "value":"#b0aca9"
+                           }
+                        }
+                     ]
+                  },{
+                     "_":"RowLayout",
+                     "name":"adsdas",
+                     "spacing":65,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"MEM"
+                        },
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":248,
+                           "height":2,
+                           "text": {
+                              "type": "bind","value": "return dataModels.free.currentValue+ \" GB\" + \" / \" + dataModels.total.currentValue+ \" GB\""
+                           },
+                           "dataModels":{
+                              "free":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"awk '/MemAvailable/ {print $2}' /proc/meminfo",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return ((Number(value)/1024/1024)).toFixed(2)}"
+                                 },
+                                 "timerInterval":1000
+                              },
+                              "total":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"awk '/MemTotal/ {print $2}' /proc/meminfo",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return  ((Number(value)/1024/1024)).toFixed(2)}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        },{
+                           "_":"Text",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":248,
+                           "height":2,
+                           "spacing": 50,
+                           "text": {
+                              "type": "bind","value": "return Math.trunc((1 - (dataModels.free.currentValue/dataModels.total.currentValue)) * 100).toString() + \" %\""
+                           },
+                           "dataModels":{
+                              "free":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"awk '/MemAvailable/ {print $2}' /proc/meminfo",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return ((Number(value)/1024/1024))}"
+                                 },
+                                 "timerInterval":1000
+                              },
+                              "total":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"awk '/MemTotal/ {print $2}' /proc/meminfo",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return  ((Number(value)/1024/1024))}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        }
+                     ]
+                  },{
+                     "_":"ProgresBar",
+                     "name":"adsdas",
+                     "Layout.fillWidth":true,
+                     "width":300,
+                     "height":10,
+                     "to": 100,
+                     "value": {
+                        "type": "bind","value": "return Math.trunc((1 - (dataModels.free.currentValue/dataModels.total.currentValue)) * 100)"
+                     },
+                     "dataModels":{
+                        "free":{
+                           "_":"CommandLineDataModel",
+                           "name":"asdasd",
+                           "command":"awk '/MemAvailable/ {print $2}' /proc/meminfo",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(value);return ((Number(value)/1024/1024))}"
+                           },
+                           "timerInterval":1000
+                        },
+                        "total":{
+                           "_":"CommandLineDataModel",
+                           "name":"asdasd",
+                           "command":"awk '/MemTotal/ {print $2}' /proc/meminfo",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(value);return  ((Number(value)/1024/1024))}"
+                           },
+                           "timerInterval":1000
+                        }
+                     }
+                  },{
+                     "_":"RowLayout",
+                     "name":"adsdas",
+                     "spacing":63,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"SWAP"
+                        },
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":248,
+                           "height":2,
+                           "text": {
+                              "type": "bind","value": "return dataModels.free.currentValue+ \" GB\" + \" / \" + dataModels.total.currentValue+ \" GB\""
+                           },
+                           "dataModels":{
+                              "free":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"awk '/SwapFree/ {print $2}' /proc/meminfo",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return ((Number(value)/1024/1024)).toFixed(2)}"
+                                 },
+                                 "timerInterval":1000
+                              },
+                              "total":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"awk '/SwapTotal/ {print $2}' /proc/meminfo",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return  ((Number(value)/1024/1024)).toFixed(2)}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        },{
+                           "_":"Text",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":248,
+                           "height":2,
+                           "spacing": 50,
+                           "text": {
+                              "type": "bind","value": "return Math.trunc((1 - (dataModels.free.currentValue/dataModels.total.currentValue)) * 100).toString() + \" %\""
+                           },
+                           "dataModels":{
+                              "free":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"awk '/SwapFree/ {print $2}' /proc/meminfo",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return ((Number(value)/1024/1024))}"
+                                 },
+                                 "timerInterval":1000
+                              },
+                              "total":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"awk '/SwapTotal/ {print $2}' /proc/meminfo",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return  ((Number(value)/1024/1024))}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        }
+                     ]
+                  },{
+                     "_":"ProgresBar",
+                     "name":"adsdas",
+                     "Layout.fillWidth":true,
+                     "width":300,
+                     "height":10,
+                     "to": 100,
+                     "value": {
+                        "type": "bind","value": "return Math.trunc((1 - (dataModels.free.currentValue/dataModels.total.currentValue)) * 100)"
+                     },
+                     "dataModels":{
+                        "free":{
+                           "_":"CommandLineDataModel",
+                           "name":"asdasd",
+                           "command":"awk '/SwapFree/ {print $2}' /proc/meminfo",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(value);return ((Number(value)/1024/1024))}"
+                           },
+                           "timerInterval":1000
+                        },
+                        "total":{
+                           "_":"CommandLineDataModel",
+                           "name":"asdasd",
+                           "command":"awk '/SwapTotal/ {print $2}' /proc/meminfo",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log(value);return  ((Number(value)/1024/1024))}"
+                           },
+                           "timerInterval":1000
+                        }
+                     }
+                  },
+                  {
+                     "_":"RowLayout",
+                     "name":"adsdas",
+                     "spacing":5,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"HDD",
+                           "color":{
+                              "type":"color",
+                              "value":"#fc8003"
+                           }
+                        },
+                        {
+                           "_":"Rectangle",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":271,
+                           "height":2,
+                           "color":{
+                              "type":"color",
+                              "value":"#b0aca9"
+                           }
+                        }
+                     ]
+                  },{
+                     "_":"RowLayout",
+                     "name":"adsdas",
+                     "spacing":45,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Windows"
+                        },
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":248,
+                           "height":2,
+                           "text": {
+                              "type": "bind","value": "return dataModels.free.currentValue+  \" / \" + dataModels.total.currentValue"
+                           },
+                           "dataModels":{
+                              "free":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"df /run/media/kwan/Windows/ | grep /dev/nvme0n1p3 | awk ' {print $3 }'",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return Math.trunc(Number(value)/1024/1024).toFixed(2)+ \" GB\"}"
+                                 },
+                                 "timerInterval":1000
+                              },
+                              "total":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"df /run/media/kwan/Windows/ | grep /dev/nvme0n1p3 | awk ' {print $2 }'",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return Math.trunc(Number(value)/1024/1024).toFixed(2)+ \" GB\"}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        },{
+                           "_":"Text",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":248,
+                           "height":2,
+                           "spacing": 50,
+                           "text": {
+                              "type": "bind","value": "return dataModels.free.currentValue "
+                           },
+                           "dataModels":{
+                              "free":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"df /run/media/kwan/Windows/ | grep /dev/nvme0n1p3 | awk ' {print $5 }'",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return value.toString().trim()}"
+                                 },
+                                 "timerInterval":1000
+                              }
+
+                           }
+                        }
+                     ]
+                  },{
+                     "_":"ProgresBar",
+                     "name":"adsdas",
+                     "Layout.fillWidth":true,
+                     "width":300,
+                     "height":10,
+                     "to": 100,
+                     "value": {
+                        "type": "bind","value": "return dataModels.free.currentValue "
+                     },
+                     "dataModels":{
+                        "free":{
+                           "_":"CommandLineDataModel",
+                           "name":"asdasd",
+                           "command":"df /run/media/kwan/Windows/ | grep /dev/nvme0n1p3 | awk ' {print $5 }'",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log('sdasdasdasdasd',value.toString().trim().slice(0,-1));return Number(value.toString().trim().slice(0,-1))}"
+                           },
+                           "timerInterval":1000
+                        }
+
+                     }
+                  },{
+                     "_":"RowLayout",
+                     "name":"adsdas",
+                     "spacing":45,
+                     "childern":[
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "text":"Linux"
+                        },
+                        {
+                           "_":"Text",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":248,
+                           "height":2,
+                           "text": {
+                              "type": "bind","value": "return dataModels.free.currentValue+  \" / \" + dataModels.total.currentValue"
+                           },
+                           "dataModels":{
+                              "free":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"df / | grep /dev/nvme0n1p6 | awk ' {print $3 }'",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return Math.trunc(Number(value)/1024/1024).toFixed(2)+ \" GB\"}"
+                                 },
+                                 "timerInterval":1000
+                              },
+                              "total":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"df / | grep /dev/nvme0n1p6 | awk ' {print $2 }'",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return Math.trunc(Number(value)/1024/1024).toFixed(2)+ \" GB\"}"
+                                 },
+                                 "timerInterval":1000
+                              }
+                           }
+                        },{
+                           "_":"Text",
+                           "name":"adsdas",
+                           "Layout.fillWidth":true,
+                           "width":248,
+                           "height":2,
+                           "spacing": 50,
+                           "text": {
+                              "type": "bind","value": "return dataModels.free.currentValue "
+                           },
+                           "dataModels":{
+                              "free":{
+                                 "_":"CommandLineDataModel",
+                                 "name":"asdasd",
+                                 "command":"df / | grep /dev/nvme0n1p6 | awk ' {print $5 }'",
+                                 "transformFunc":{
+                                    "type":"function",
+                                    "value":"(value) => {console.log(value);return value.toString().trim()}"
+                                 },
+                                 "timerInterval":1000
+                              }
+
+                           }
+                        }
+                     ]
+                  },{
+                     "_":"ProgresBar",
+                     "name":"adsdas",
+                     "Layout.fillWidth":true,
+                     "width":300,
+                     "height":10,
+                     "to": 100,
+                     "value": {
+                        "type": "bind","value": "return dataModels.free.currentValue "
+                     },
+                     "dataModels":{
+                        "free":{
+                           "_":"CommandLineDataModel",
+                           "name":"asdasd",
+                           "command":"df / | grep /dev/nvme0n1p6 | awk ' {print $5 }'",
+                           "transformFunc":{
+                              "type":"function",
+                              "value":"(value) => {console.log('sdasdasdasdasd',value.toString().trim().slice(0,-1));return Number(value.toString().trim().slice(0,-1))}"
+                           },
+                           "timerInterval":1000
+                        }
+
+                     }
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

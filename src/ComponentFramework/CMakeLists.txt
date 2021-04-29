@@ -1,0 +1,3 @@
+add_subdirectory(ApplicationModel)
+add_subdirectory(JsonToTreeParser)
+add_subdirectory(JsonValueConverter)

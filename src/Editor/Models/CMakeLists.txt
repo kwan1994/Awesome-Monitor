@@ -1,0 +1,4 @@
+target_sources(AwesomeMonitor PUBLIC ImageLivePreviewProvider.h)
+
+add_subdirectory(ComponentListModel)
+add_subdirectory(PluginTreeModel)

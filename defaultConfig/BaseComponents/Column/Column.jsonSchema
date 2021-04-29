@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "_": {"const": "Column"},
+    "spacing": {"type": "number","minimum": 0},
+    "topPadding": {"type": "number","minimum": 0},
+    "anchors.horizontalCenter": {"type": ["number","object"],"minimum": 0}
+
+  }
+
+}

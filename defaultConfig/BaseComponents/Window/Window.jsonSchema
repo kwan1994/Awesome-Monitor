@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "title": "Window",
+  "description": "Window component",
+  "additionalProperties": true,
+  "color": {
+    "type": "object",
+    "additionalProperties": true
+  }
+}

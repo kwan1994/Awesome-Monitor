@@ -1,0 +1,1 @@
+target_sources(AwesomeMonitor PUBLIC ComponentListModel.h ComponentListModel.cpp)

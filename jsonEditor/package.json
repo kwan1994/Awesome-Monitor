@@ -1,0 +1,51 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@ant-design/icons": "^4.3.0",
+    "@fluentui/react": "^7.153.4",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@json-editor/json-editor": "^2.5.1",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@rjsf/antd": "^2.4.0",
+    "@rjsf/bootstrap-4": "^2.4.0",
+    "@rjsf/core": "^2.4.0",
+    "@rjsf/fluent-ui": "^2.4.0",
+    "@rjsf/material-ui": "^2.4.0",
+    "@rjsf/semantic-ui": "^2.4.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.1.2",
+    "@testing-library/user-event": "^12.2.2",
+    "antd": "^4.9.1",
+    "dayjs": "^1.9.6",
+    "qwebchannel": "^5.9.0",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.0",
+    "spectre.css": "^0.5.9",
+    "style-it": "^2.1.4",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "BROWSER='google-chrome-stable' react-scripts start",
+    "build": "react-scripts build && rm -rf ../plasmoid/contents/code/jsonForm && mkdir -p ../plasmoid/contents/code/jsonForm && mv build ../plasmoid/contents/code/jsonForm",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

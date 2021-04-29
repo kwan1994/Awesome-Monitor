@@ -1,0 +1,9 @@
+[General]
+basicComponentsFolder=~/.config/AwesomeMonitor/BaseComponents
+dataModelsFolder=~/.config/AwesomeMonitor/DataModels
+modelFile=~/.config/AwesomeMonitor/Model.json
+timerInterval=1000
+
+[Custom]
+folder=/home/kwan/0CC4-8589/AwesomeMonitor/examples/componentModels
+folders=/home/kwan/0CC4-8589/AwesomeMonitor/examples/comp

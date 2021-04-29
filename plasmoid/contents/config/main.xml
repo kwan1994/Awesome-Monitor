@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name="/home/kwan/config.xml"/>
+    <group name="General">
+        <entry name="dataModelsFolder" type="String">
+            <label>font color</label>
+            <default>/home/kwan/0CC4-8589/AwesomeMonitor/examples/dataModels</default>
+        </entry>
+        <entry name="componentsFolder" type="String">
+            <label>font color</label>
+            <default>/home/kwan/0CC4-8589/AwesomeMonitor/examples/componentModels</default>
+        </entry>
+        <entry name="modelFile" type="String">
+            <label>font color</label>
+            <default>/home/kwan/0CC4-8589/AwesomeMonitor/examples/componentModels/Model.json</default>
+        </entry>
+        <entry name="timerInterval" type="int">
+            <label>font size</label>
+            <default>1000</default>
+        </entry>
+    </group>
+</kcfg>
