@@ -50,6 +50,7 @@ class Plugin : public QObject {
   QSettings settings = QSettings("AwesomeMonitor", QSettings::IniFormat);
   ImageProvider *imageProvider;
   bool addProvider = true;
+  bool shouldHideWindows = false;
 
  public:
   Q_INVOKABLE int numberOfWindows();
@@ -60,7 +61,8 @@ class Plugin : public QObject {
   Q_INVOKABLE void initializePluginFromString(QString modelString);
   Q_INVOKABLE QString stylesheet() { return Plasma::Theme().styleSheet(css); }
   Q_INVOKABLE bool saveToFile(QJsonObject json);
-  Q_INVOKABLE QObject *getEditor(QString path);
+  Q_INVOKABLE void setHideWindows();
+  Q_INVOKABLE bool tryCreateDefaultModelFile(QString);
   ~Plugin();
  signals:
   void intializing();

@@ -68,8 +68,6 @@ Qt2.ApplicationWindow {
 
 
 
-    minimumWidth: 1240
-    minimumHeight: 1024
     property bool shouldClose: false
 
 
@@ -280,7 +278,7 @@ Qt2.ApplicationWindow {
                                 let treeIndex = tree.currentIndex;
                                 //let listData = list.model.data(listIndex,0);
                                 let treeData = tree.model.data(treeIndex,256);
-                                return listIndex !== -1 && treeIndex !== -1 && !treeData.isDataModel()
+                                return listIndex !== -1 && (treeIndex !== -1)?!treeData.isDataModel():true;
                             }
                             signal schemaChange(var schema, var forData)
                             onClicked: {
@@ -372,7 +370,7 @@ Qt2.ApplicationWindow {
 
                         property var hoveredIndex: value
 
-highlight: Plasma2.Highlight {
+                        highlight: Plasma2.Highlight {
     clip: true
     //anchors.fill: parent
     //hover: listItemArea.containsMouse
@@ -555,7 +553,7 @@ highlight: Plasma2.Highlight {
             id:ssd
 
             ColumnLayout{
-                anchors.right: parent.right
+                anchors.right: p.left
                 anchors.top: parent.top
                 anchors.topMargin: 10
                 anchors.rightMargin: 10
@@ -647,41 +645,51 @@ highlight: Plasma2.Highlight {
 
 
 
-            //            Plasma2.ScrollBar {
-            //                //anchors.right: parent.right
+                        Plasma2.ScrollBar {
+                            anchors.left: parent.left
+z:20
+                            //    id:p
+                            orientation: Qt.Horizontal
+                            visible: grid.contentWidth > parent.width
 
-            //                //    id:p
-            //                orientation: Qt.Horizontal
-            //                //visible: grid.contentWidth > parent.width
-            //                implicitWidth: 20
-            //                flickableItem: grid
-            //                interactive: true
-            //                stepSize: 10
-            //                scrollButtonInterval: 10
-            //                anchors.leftMargin: 10
-            //                anchors.rightMargin: 5
-            //                anchors.topMargin: 5
-            //                anchors.bottomMargin: 5
-            //                anchors.bottom: parent.bottom
-            //                anchors.left: parent.left
-            //                anchors.right: parent.right
+                            flickableItem: grid
+                            interactive: true
+                            stepSize: 10
+                            scrollButtonInterval: 10
+                            anchors.leftMargin: 10
+                            anchors.rightMargin: 5
+                            anchors.topMargin: 5
+                            anchors.bottomMargin: 5
+                            anchors.bottom: parent.bottom
+                            anchors.right: parent.right
 
-            //            }
+                        }
 
 
+                        Plasma2.ScrollBar {
+                            z: 20
+                            id:p
+                            orientation: Qt.Vertical
+                            visible: grid.contentHeight > parent.height
+
+                            flickableItem: grid
+                            interactive: true
+                            stepSize: 10
+                            scrollButtonInterval: 10
+
+                        }
 
 
             Flickable {
 
-                ScrollBar.horizontal: ScrollBar {id:scroll}
+                boundsMovement: Flickable.StopAtBounds
                 id: grid
-                anchors.fill: parent
+                width: parent.width
+                height: parent.height
                 //anchors.centerIn: parent
                 contentHeight:  g.height * window.scale
                 contentWidth: g.width * window.scale;
                 clip: true
-                contentX: (g.width * window.scale)/2-grid.width/2
-                contentY: (g.height * window.scale)/2-grid.height/2
 
                 Grid {
                     id:g
@@ -796,7 +804,7 @@ highlight: Plasma2.Highlight {
 
 
     }
-    Component.onCompleted: {Plugin.resetPlugin()}
+    Component.onCompleted: {Plugin.setHideWindows();Plugin.resetPlugin()}
     onClosing: {
         close.accepted = false;
         closeDialog.open();

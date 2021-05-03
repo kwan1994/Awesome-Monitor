@@ -14,8 +14,14 @@ class ImageProvider : public QQuickImageProvider {
 
  public slots:
   void pluginInitializing() { initializing = true; };
-  void pluginInitialize(QVector<QQuickWindow *> windows) {
+  void pluginInitialize(QVector<QQuickWindow *> windows,
+                        bool shouldHideWindows) {
     m_windows = windows;
+    if (shouldHideWindows) {
+      for (auto window : windows) {
+        window->setVisibility(QWindow::Hidden);
+      }
+    }
     initializing = false;
   };
 
@@ -28,11 +34,9 @@ class ImageProvider : public QQuickImageProvider {
         m_windows[number]) {
       qDebug() << "window";
       auto window = m_windows[number];
-      window->setVisibility(QWindow::Hidden);
       auto image = window->grabWindow();
       return image;
     }
-    qDebug() << "sdasdsa";
     return QImage();
   }
 

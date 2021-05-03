@@ -36,3 +36,10 @@ cmake-build-debug/
 .idea/
 *.user.*
 *.user
+
+*CMakeFiles*
+*cmake*
+*Makefile*
+regenerateindex.sh
+prefix.sh
+*_autogen*

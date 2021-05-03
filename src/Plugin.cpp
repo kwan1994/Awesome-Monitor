@@ -12,7 +12,7 @@ Plugin::Plugin(QObject *parent) : QObject(parent) {
   connect(this, &Plugin::intializing,
           [this] { imageProvider->pluginInitializing(); });
   connect(this, &Plugin::initialized, [this](QVector<QQuickWindow *> windows) {
-    imageProvider->pluginInitialize(windows);
+    imageProvider->pluginInitialize(windows, shouldHideWindows);
   });
 }
 
@@ -95,9 +95,17 @@ void Plugin::resetPlugin() { initializePlugin(); }
 
 void Plugin::deletePlugin() { this->model = nullptr; }
 
-QObject *Plugin::getEditor(QString path) {
-  QQmlComponent comp(QQmlEngine::contextForObject(this)->engine());
-  auto compItem = comp.create();
-  QQmlEngine::setObjectOwnership(compItem, QQmlEngine::CppOwnership);
-  return compItem;
+void Plugin::setHideWindows() { shouldHideWindows = true; }
+
+bool Plugin::tryCreateDefaultModelFile(QString path) {
+  QFile file(path);
+  if (file.exists()) {
+    return true;
+  };
+
+  if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+    return file.write("{\"windows\":[]}") == 14;
+  }
+
+  return false;
 }

@@ -319,16 +319,29 @@ bool PluginTreeModel::insertRow(int row, const QModelIndex &parent,
   auto pItem = getItem(parent);
   if (!pItem) return false;
   QFile file(schemaPath);
-  if (!file.open(QFile::ReadOnly)) return false;
+  if (!file.open(QFile::ReadOnly)) {
+    qDebug() << "ReadOnly";
+    return false;
+  }
   auto name = (QFileInfo(file)).baseName();
   auto schemaFormData = file.readAll();
   if (schemaFormData.isEmpty()) return false;
   QJsonParseError e;
   auto jsonSchemaDocument = QJsonDocument::fromJson(schemaFormData, &e);
-  if (e.error != QJsonParseError::NoError) return false;
-  if (!jsonSchemaDocument.isObject()) return false;
+  if (e.error != QJsonParseError::NoError) {
+    qDebug() << "error";
+    ;
+    return false;
+  }
+  if (!jsonSchemaDocument.isObject()) {
+    qDebug() << "isObject";
+    return false;
+  }
   auto jsonSchemaObject = jsonSchemaDocument.object();
-  if (jsonSchemaObject.isEmpty()) return false;
+  if (jsonSchemaObject.isEmpty()) {
+    qDebug() << "isEmptyObject";
+    return false;
+  }
   beginInsertRows(parent, row, row);
   auto child =
       new TreeItem(QJsonObject().toVariantMap(),

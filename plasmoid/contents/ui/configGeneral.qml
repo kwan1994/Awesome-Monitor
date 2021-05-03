@@ -42,12 +42,15 @@ Item {
 
     FileDialog {
         id: fileDialogJson
-        selectExisting: true
+        defaultSuffix: "json"
+        selectExisting: false
         selectFolder: false
         nameFilters: ["Json Files (*.json)"]
         onAccepted: {
 
             modelFile.text = urlToPath(fileDialogJson.fileUrl)
+            if(!Plugin.tryCreateDefaultModelFile(modelFile.text))
+                console.log('cannot add file');
             Qt.quit()
         }
     }

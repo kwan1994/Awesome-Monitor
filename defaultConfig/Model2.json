@@ -15,7 +15,7 @@
                     },
                     "childern": [
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -46,7 +46,7 @@
                             "spacing": 5
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -85,7 +85,7 @@
                             "spacing": 240
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -124,7 +124,7 @@
                             "spacing": 240
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -163,7 +163,7 @@
                             "spacing": 240
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -202,7 +202,7 @@
                             "spacing": 240
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -233,7 +233,7 @@
                             "spacing": 5
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -354,7 +354,7 @@
                             "width": 300
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -475,7 +475,7 @@
                             "width": 300
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -506,7 +506,7 @@
                             "spacing": 5
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -607,7 +607,7 @@
                             "width": 300
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -734,7 +734,7 @@
                     },
                     "childern": [
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -765,7 +765,7 @@
                             "spacing": 5
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "anchors.bottomMargin": 0,
                             "anchors.topMargin": 0,
                             "childern": [
@@ -812,7 +812,7 @@
                             "spacing": 175
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -834,7 +834,7 @@
                             "spacing": 190
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -868,7 +868,7 @@
                             "spacing": 212
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -902,7 +902,7 @@
                             "spacing": 213
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -933,7 +933,7 @@
                             "spacing": 5
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -981,7 +981,7 @@
                             "name": "adsdas"
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -1030,7 +1030,7 @@
                             "name": "adsdas"
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",
@@ -1079,7 +1079,7 @@
                             "name": "adsdas"
                         },
                         {
-                            "_": "RowLayout",
+                            "_": "Row",
                             "childern": [
                                 {
                                     "_": "Text",

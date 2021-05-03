@@ -48,6 +48,7 @@ Item {
     Component.onCompleted: {
 
         plasmoid.setAction("reset","Resets Visualization")
+        Plugin.resetPlugin();
 
     }
 
