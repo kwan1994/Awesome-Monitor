@@ -157,10 +157,12 @@ Item {
             }
 
             Button {
+                property var win: null
+                enabled: !(win && win.visible)
                 onClicked: {
                         let editor = Qt.createComponent("Editor.qml");
                         console.log("sda",editor,editor.errorString());
-                        let win = editor.createObject(root);
+                        win = editor.createObject(root);
                         console.log("asdas",win);
                         win.show();
                 }
