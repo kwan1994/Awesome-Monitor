@@ -55,7 +55,6 @@
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/static/js/2.203305ea.chunk.js.map
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/static/js/2.203305ea.chunk.js.LICENSE.txt
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/static/js/runtime-main.22fdafc7.js
-/usr/share/plasma/plasmoids/AwesomeMonitor/metadata.json
 /usr/share/kservices5/plasma-applet-AwesomeMonitor.desktop
 /usr/lib/libjson-schema-validator.a
 /usr/include/json-schema.hpp

@@ -1,8 +1,5 @@
 
 
-#include <Components/DataComponents/UploadSpeedDataModel/UploadSpeedDataModel.h>
-#include <Editor/Models/PluginTreeModel/PluginTreeModel.h>
-#include <Plugin.h>
 #include <arpa/inet.h>
 #include <net/if.h>
 #include <netinet/in.h>
@@ -40,9 +37,5 @@ int main(int argc, char **args) {
   //  sp->initializePlugin();
   // return application.exec();
 
-  auto s = new PluginTreeModel();
-
-  auto test = new QAbstractItemModelTester(
-      s, QAbstractItemModelTester::FailureReportingMode::Warning);
   return 0;
 }
