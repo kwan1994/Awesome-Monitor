@@ -14,20 +14,32 @@ class ComponentNode;
 
 class ComponentListModel : public QAbstractListModel {
   Q_OBJECT
-  QVector<ComponentNode *> basicComponents = QVector<ComponentNode *>();
-  QVector<ComponentNode *> customBasicComponents = QVector<ComponentNode *>();
   QVector<ComponentNode *> components = QVector<ComponentNode *>();
   QVector<ComponentNode *> customComponents = QVector<ComponentNode *>();
   QVector<ComponentNode *> dataModels = QVector<ComponentNode *>();
   QVector<ComponentNode *> customDataModels = QVector<ComponentNode *>();
 
-  QStringList componentNames = {"Cpu", "Network", "Hdd", "Memory"};
-  QStringList dataModelNames = {
-      "CommandLineDataModel", "CpuCurrentFrequencyDataModel",
-      "CpuMaxTemperatureDataModel", "CpuTemperatureDataModel"};
-  QStringList basicComponentNames = {"Text",        "ProgresBar",   "Row",
-                                     "Window",      "Column",       "Image",
-                                     "BorderImage", "AnimatedImage"};
+  QStringList dataModelNames = {"BatteryCapacityDataModel",
+                                "BatteryStatusDataModel",
+                                "CommandLineDataModel",
+                                "CpuCurrentFrequencyDataModel",
+                                "CpuMaxFrequencyDataModel",
+                                "CpuMaxTemperatureDataModel",
+                                "CpuMinFrequencyDataModel",
+                                "CpuTemperatureDataModel",
+                                "CpuUtilisationDataModel",
+                                "DownloadSpeedDataModel",
+                                "SingleCpuCoreCurrentFrequencyDataModel",
+                                "SingleCpuCoreMaxFrequencyDataModel",
+                                "SingleCpuCoreMaxTemperatureDataModel",
+                                "SingleCpuCoreMinFrequencyDataModel",
+                                "SingleCpuCoreTemperatureDataModel",
+                                "SingleCpuCoreUtilisationDataModel",
+                                "UploadSpeedDataModel"};
+
+  QStringList basicComponentNames = {
+      "Text",  "ProgresBar",  "Row",           "Window",   "Column",
+      "Image", "BorderImage", "AnimatedImage", "Rectangle"};
 
   QString basicComponentsFolderPath = Utils::getBasicComponentFolder();
   QString dataModelsFolderPath = Utils::getDataModelsFolderSetting();

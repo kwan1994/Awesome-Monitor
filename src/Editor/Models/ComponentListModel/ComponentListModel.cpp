@@ -32,9 +32,8 @@ ComponentListModel::ComponentListModel(QObject *parent)
 }
 
 int ComponentListModel::rowCount(const QModelIndex &parent) const {
-  return components.length() + basicComponents.length() + dataModels.length() +
-         customBasicComponents.length() + customComponents.length() +
-         customDataModels.length();
+  return components.length() + +dataModels.length() +
+         customComponents.length() + customDataModels.length();
 }
 
 QVariant ComponentListModel::data(const QModelIndex &index, int role) const {
@@ -49,9 +48,6 @@ QVariant ComponentListModel::data(const QModelIndex &index, int role) const {
 
 void ComponentListModel::initialize() {
   beginResetModel();
-
-  basicComponents.clear();
-  customBasicComponents.clear();
 
   components.clear();
   customComponents.clear();

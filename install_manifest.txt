@@ -7,6 +7,7 @@
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/AwesomeMonitor.cbp
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/main.qml
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/Editor.qml
+/usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/configGeneral.qml.autosave
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/jsonForm/build/static/css/2.eb159255.chunk.css.map
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/jsonForm/build/static/css/2.eb159255.chunk.css
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/jsonForm/build/static/js/2.203305ea.chunk.js
@@ -65,16 +66,14 @@
 /home/kwan/.config/AwesomeMonitor/AwesomeMonitor
 /home/kwan/.config/AwesomeMonitor/Model.json
 /home/kwan/.config/AwesomeMonitor/Model2.json
+/home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMaxFrequencyDataModel/SingleCpuCoreMaxFrequencyDataModel.jsonSchema
+/home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMaxFrequencyDataModel/SingleCpuCoreMaxFrequencyDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/CpuMaxFrequencyDataModel/CpuMaxFrequencyDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/CpuMaxFrequencyDataModel/CpuMaxFrequencyDataModel.jsonSchema
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMinFrequencyDataModel/SingleCpuCoreMinFrequencyDataModel.jsonSchema
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMinFrequencyDataModel/SingleCpuCoreMinFrequencyDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreTemperatureDataModel/SingleCpuCoreTemperatureDataModel.jsonSchema
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreTemperatureDataModel/SingleCpuCoreTemperatureDataModel.qml
-/home/kwan/.config/AwesomeMonitor/DataModels/ProccessesDataModel/ProccessesDataModel.qml
-/home/kwan/.config/AwesomeMonitor/DataModels/ProccessesDataModel/ProccessesDataModel.jsonSchema
-/home/kwan/.config/AwesomeMonitor/DataModels/SIngleCpuCoreMaxFrequencyDataModel/SIngleCpuCoreMaxFrequencyDataModel.jsonSchema
-/home/kwan/.config/AwesomeMonitor/DataModels/SIngleCpuCoreMaxFrequencyDataModel/SingleCpuCoreMaxFrequencyDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreUtilisationDataModel/SingleCpuCoreUtilisationDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreUtilisationDataModel/SingleCpuCoreUtilisationDataModel.jsonSchema
 /home/kwan/.config/AwesomeMonitor/DataModels/BatteryStatusDataModel/BatteryStatusDataModel.qml
