@@ -6,7 +6,7 @@
  * SPDX-License-Identifier: MIT
  *
  */
-#include <json-schema.hpp>
+#include <nlohmann/json-schema.hpp>
 
 #include <fstream>
 #include <iostream>
@@ -64,7 +64,8 @@ int main(int argc, char *argv[])
 	}
 
 	// 2) create the validator and
-	json_validator validator(loader, [](const std::string &, const std::string &) {});
+	json_validator validator(loader,
+							 nlohmann::json_schema::default_string_format_check);
 
 	try {
 		// insert this schema as the root to the validator

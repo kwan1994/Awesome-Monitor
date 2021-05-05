@@ -13,8 +13,23 @@ find_package(KF5Plasma REQUIRED plasma)
 
 # set this path to schema-test-suite to get tests compiled - optional
 # if you want to inherit tests
+set(PATH_TO_NLOHMANN_JSON_REPO ./json)
+include(FetchContent)
+
+FetchContent_Declare(json
+        GIT_REPOSITORY https://github.com/ArthurSonzogni/nlohmann_json_cmake_fetchcontent
+        GIT_TAG v3.9.1)
+
+FetchContent_GetProperties(json)
+if(NOT json_POPULATED)
+    FetchContent_Populate(json)
+    add_subdirectory(${json_SOURCE_DIR} ${json_BINARY_DIR} EXCLUDE_FROM_ALL)
+endif()
+
+
 
 add_subdirectory(json-schema-validator)
+
 #configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/Components/ComponentUtils/defaultJavascriptTransformers.mjs ${CMAKE_CURRENT_BINARY_DIR}/src/Components/ComponentUtils COPYONLY)
 #target_link_libraries(AwesomeMonitor KF5::Plasma  Qt5::Qml Qt5::Quick Qt5::Gui Qt5::Widgets Boost::filesystem json-schema-validator)
 #target_include_directories(AwesomeMonitor PUBLIC /usr/local/lib)
@@ -118,7 +133,6 @@ add_subdirectory(src)
 # set this path to schema-test-suite to get tests compiled - optional
 # if you want to inherit tests
 
-include_directories(json-schema-validator)
 #configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/Components/ComponentUtils/defaultJavascriptTransformers.mjs ${CMAKE_CURRENT_BINARY_DIR}/src/Components/ComponentUtils COPYONLY)
 #target_link_libraries(AwesomeMonitor KF5::Plasma  Qt5::Qml Qt5::Quick Qt5::Gui Qt5::Widgets Boost::filesystem json-schema-validator)
 #target_include_directories(AwesomeMonitor PUBLIC /usr/local/lib)
@@ -127,18 +141,7 @@ include_directories(json-schema-validator)
 
 
 
-add_executable(AwesomeMonitor-bin main.cpp)
-#
-add_dependencies(AwesomeMonitor-bin AwesomeMonitor)
-target_include_directories(
-        AwesomeMonitor-bin
-        PUBLIC
-        ${header_dir_list} # Recursive
-)
-target_include_directories( AwesomeMonitor-bin PUBLIC /usr/local/include)
-target_link_libraries( AwesomeMonitor-bin  Qt5::Qml Qt5::Quick Qt5::Gui Qt5::Widgets Qt5::Test AwesomeMonitor)
-target_include_directories(AwesomeMonitor-bin PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} )
-link_directories(AwesomeMonitor-bin ${CMAKE_CURRENT_SOURCE_DIR})
+
 ##
 #add_custom_command(
 #        TARGET AwesomeMonitor

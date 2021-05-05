@@ -56,8 +56,8 @@
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/static/js/2.203305ea.chunk.js.LICENSE.txt
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/static/js/runtime-main.22fdafc7.js
 /usr/share/kservices5/plasma-applet-AwesomeMonitor.desktop
-/usr/lib/libjson-schema-validator.a
-/usr/include/json-schema.hpp
+/usr/bin/json-schema-validate
+/usr/bin/readme-json-schema
 /usr/lib/qt/qml/AwesomeMonitor/libAwesomeMonitor.so
 /usr/lib/qt/qml/AwesomeMonitor/qmldir
 /usr/lib/qt/qml/AwesomeMonitor/plugins.qmltypes

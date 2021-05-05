@@ -5,7 +5,7 @@
 		<Option title="AwesomeMonitor"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Qml\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Network\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Quick\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5QmlModels\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Test\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Plasma\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Package\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5CoreAddons\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Service\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Config\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Xml\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5DBus\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5WindowSystem\;CMake Files\..\..\..\..\usr\lib64\cmake\Boost-1.75.0\;CMake Files\..\..\..\..\usr\lib64\cmake\boost_headers-1.75.0\;CMake Files\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.75.0\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\ECM\;CMake Files\..\..\..\..\usr\share\ECM\cmake\;CMake Files\..\..\..\..\usr\share\ECM\modules\;CMake Files\..\..\..\..\usr\share\ECM\kde-modules\;CMake Files\json-schema-validator\;CMake Files\src\;CMake Files\src\Editor\;CMake Files\src\Editor\Models\;CMake Files\src\Editor\Models\ComponentListModel\;CMake Files\src\Editor\Models\PluginTreeModel\;CMake Files\src\ComponentFramework\;CMake Files\src\ComponentFramework\ApplicationModel\;CMake Files\src\ComponentFramework\JsonToTreeParser\;CMake Files\src\ComponentFramework\JsonValueConverter\;CMake Files\src\Components\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Qml\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Network\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Quick\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5QmlModels\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Test\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Plasma\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Package\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5CoreAddons\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Service\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Config\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Xml\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5DBus\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5WindowSystem\;CMake Files\..\..\..\..\usr\lib64\cmake\Boost-1.75.0\;CMake Files\..\..\..\..\usr\lib64\cmake\boost_headers-1.75.0\;CMake Files\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.75.0\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\ECM\;CMake Files\..\..\..\..\usr\share\ECM\cmake\;CMake Files\..\..\..\..\usr\share\ECM\modules\;CMake Files\..\..\..\..\usr\share\ECM\kde-modules\;CMake Files\_deps\;CMake Files\_deps\json-src\;CMake Files\json-schema-validator\;CMake Files\src\;CMake Files\src\Editor\;CMake Files\src\Editor\Models\;CMake Files\src\Editor\Models\ComponentListModel\;CMake Files\src\Editor\Models\PluginTreeModel\;CMake Files\src\ComponentFramework\;CMake Files\src\ComponentFramework\ApplicationModel\;CMake Files\src\ComponentFramework\JsonToTreeParser\;CMake Files\src\ComponentFramework\JsonValueConverter\;CMake Files\src\Components\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor"/>
@@ -67,36 +67,6 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install">
-				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="KF5WindowSystem_QCH">
-				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 KF5WindowSystem_QCH"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="KF5Service_QCH">
 				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor"/>
 				<Option type="4"/>
@@ -107,91 +77,11 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="AwesomeMonitor-bin">
-				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/AwesomeMonitor-bin" prefix_auto="0" extension_auto="0"/>
+			<Target title="edit_cache">
 				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DQT_QML_LIB"/>
-					<Add option="-DQT_NETWORK_LIB"/>
-					<Add option="-DQT_CORE_LIB"/>
-					<Add option="-DQT_QUICK_LIB"/>
-					<Add option="-DQT_QMLMODELS_LIB"/>
-					<Add option="-DQT_GUI_LIB"/>
-					<Add option="-DQT_WIDGETS_LIB"/>
-					<Add option="-DQT_TESTLIB_LIB"/>
-					<Add option="-DQT_TESTCASE_BUILDDIR=&quot;/home/kwan/0CC4-8589/AwesomeMonitor&quot;"/>
-					<Add option="-DKCOREADDONS_LIB"/>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/AwesomeMonitor-bin_autogen/include"/>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator"/>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor"/>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
-					<Add directory="/usr/include/qt"/>
-					<Add directory="/usr/include/qt/QtQml"/>
-					<Add directory="/usr/include/qt/QtNetwork"/>
-					<Add directory="/usr/include/qt/QtCore"/>
-					<Add directory="/usr/lib/qt/mkspecs/linux-g++"/>
-					<Add directory="/usr/include/qt/QtQuick"/>
-					<Add directory="/usr/include/qt/QtQmlModels"/>
-					<Add directory="/usr/include/qt/QtGui"/>
-					<Add directory="/usr/include/qt/QtWidgets"/>
-					<Add directory="/usr/include/qt/QtTest"/>
-					<Add directory="/usr/include/KF5"/>
-					<Add directory="/usr/include/KF5/Plasma"/>
-					<Add directory="/usr/include/KF5/KService"/>
-					<Add directory="/usr/include/KF5/KConfigCore"/>
-					<Add directory="/usr/include/KF5/KCoreAddons"/>
-					<Add directory="/usr/include/KF5/KPackage"/>
-				</Compiler>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 AwesomeMonitor-bin"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="AwesomeMonitor-bin/fast">
-				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/AwesomeMonitor-bin" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DQT_QML_LIB"/>
-					<Add option="-DQT_NETWORK_LIB"/>
-					<Add option="-DQT_CORE_LIB"/>
-					<Add option="-DQT_QUICK_LIB"/>
-					<Add option="-DQT_QMLMODELS_LIB"/>
-					<Add option="-DQT_GUI_LIB"/>
-					<Add option="-DQT_WIDGETS_LIB"/>
-					<Add option="-DQT_TESTLIB_LIB"/>
-					<Add option="-DQT_TESTCASE_BUILDDIR=&quot;/home/kwan/0CC4-8589/AwesomeMonitor&quot;"/>
-					<Add option="-DKCOREADDONS_LIB"/>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/AwesomeMonitor-bin_autogen/include"/>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator"/>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor"/>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
-					<Add directory="/usr/include/qt"/>
-					<Add directory="/usr/include/qt/QtQml"/>
-					<Add directory="/usr/include/qt/QtNetwork"/>
-					<Add directory="/usr/include/qt/QtCore"/>
-					<Add directory="/usr/lib/qt/mkspecs/linux-g++"/>
-					<Add directory="/usr/include/qt/QtQuick"/>
-					<Add directory="/usr/include/qt/QtQmlModels"/>
-					<Add directory="/usr/include/qt/QtGui"/>
-					<Add directory="/usr/include/qt/QtWidgets"/>
-					<Add directory="/usr/include/qt/QtTest"/>
-					<Add directory="/usr/include/KF5"/>
-					<Add directory="/usr/include/KF5/Plasma"/>
-					<Add directory="/usr/include/KF5/KService"/>
-					<Add directory="/usr/include/KF5/KConfigCore"/>
-					<Add directory="/usr/include/KF5/KCoreAddons"/>
-					<Add directory="/usr/include/KF5/KPackage"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 AwesomeMonitor-bin/fast"/>
+					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
@@ -227,107 +117,55 @@
 					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="AwesomeMonitor-bin_autogen">
+			<Target title="KF5WindowSystem_QCH">
 				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 AwesomeMonitor-bin_autogen"/>
+					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 KF5WindowSystem_QCH"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="json-schema-validate">
-				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/json-schema-validate" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
-				</Compiler>
+			<Target title="install">
+				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor"/>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 json-schema-validate"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="json-schema-validate/fast">
-				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/json-schema-validate" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 json-schema-validate/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="json-schema-validator">
-				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/libjson-schema-validator.a" prefix_auto="0" extension_auto="0"/>
+			<Target title="nlohmann_json_schema_validator">
+				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/libnlohmann_json_schema_validator.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
+					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/_deps/json-src/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 json-schema-validator"/>
+					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 nlohmann_json_schema_validator"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="json-schema-validator/fast">
-				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/libjson-schema-validator.a" prefix_auto="0" extension_auto="0"/>
+			<Target title="nlohmann_json_schema_validator/fast">
+				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/libnlohmann_json_schema_validator.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
+					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/_deps/json-src/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 json-schema-validator/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="readme-json-schema">
-				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/readme-json-schema" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 readme-json-schema"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="readme-json-schema/fast">
-				<Option output="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/readme-json-schema" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 readme-json-schema/fast"/>
+					<Build command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 nlohmann_json_schema_validator/fast"/>
 					<CompileFile command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/Makefile&quot;  VERBOSE=1 clean"/>
@@ -349,6 +187,8 @@
 					<Add option="-DQT_QMLMODELS_LIB"/>
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/src/AwesomeMonitor_autogen/include"/>
+					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/src/../json/single_include/nlohmann"/>
+					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/_deps/json-src/include"/>
 					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
 					<Add directory="/usr/include/KF5"/>
 					<Add directory="/usr/include/KF5/Plasma"/>
@@ -389,6 +229,8 @@
 					<Add option="-DQT_QMLMODELS_LIB"/>
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/src/AwesomeMonitor_autogen/include"/>
+					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/src/../json/single_include/nlohmann"/>
+					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/_deps/json-src/include"/>
 					<Add directory="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src"/>
 					<Add directory="/usr/include/KF5"/>
 					<Add directory="/usr/include/KF5/Plasma"/>
@@ -494,26 +336,23 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/AwesomeMonitor-bin_autogen/mocs_compilation.cpp">
-			<Option target="AwesomeMonitor-bin"/>
+		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src/json-patch.cpp">
+			<Option target="nlohmann_json_schema_validator"/>
 		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/app/json-schema-validate.cpp">
-			<Option target="json-schema-validate"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/app/readme.cpp">
-			<Option target="readme-json-schema"/>
+		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src/json-patch.hpp">
+			<Option target="nlohmann_json_schema_validator"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src/json-schema-draft7.json.cpp">
-			<Option target="json-schema-validator"/>
+			<Option target="nlohmann_json_schema_validator"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src/json-uri.cpp">
-			<Option target="json-schema-validator"/>
+			<Option target="nlohmann_json_schema_validator"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src/json-validator.cpp">
-			<Option target="json-schema-validator"/>
+			<Option target="nlohmann_json_schema_validator"/>
 		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/main.cpp">
-			<Option target="AwesomeMonitor-bin"/>
+		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/src/string-format-check.cpp">
+			<Option target="nlohmann_json_schema_validator"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/AppPlugin.h">
 			<Option target="AwesomeMonitor"/>
@@ -522,27 +361,21 @@
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/ComponentFramework/ApplicationModel/Model.cpp">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/ComponentFramework/ApplicationModel/Model.h">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/ComponentFramework/JsonToTreeParser/JsonToTreeParser.cpp">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/ComponentFramework/JsonToTreeParser/JsonToTreeParser.h">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/ComponentFramework/JsonValueConverter/JsonValueConverter.cpp">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/ComponentFramework/JsonValueConverter/JsonValueConverter.h">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/Components/AwesomeComponentsPlugin.h">
@@ -558,12 +391,10 @@
 			<Option target="awesomeComponentsPlugin"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/Components/ComponentUtils/utils.cpp">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 			<Option target="awesomeComponentsPlugin"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/Components/ComponentUtils/utils.h">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 			<Option target="awesomeComponentsPlugin"/>
 		</Unit>
@@ -682,23 +513,18 @@
 			<Option target="awesomeComponentsPlugin"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/Editor/Models/ComponentListModel/ComponentListModel.cpp">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/Editor/Models/ComponentListModel/ComponentListModel.h">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/Editor/Models/ImageLivePreviewProvider.h">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/Editor/Models/PluginTreeModel/PluginTreeModel.cpp">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/Editor/Models/PluginTreeModel/PluginTreeModel.h">
-			<Option target="AwesomeMonitor-bin"/>
 			<Option target="AwesomeMonitor"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/src/Plugin.cpp">
@@ -1147,6 +973,9 @@
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/share/ECM/kde-modules/prefix.sh.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\ECM\kde-modules\"/>
+		</Unit>
+		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/_deps/json-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\_deps\json-src\"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\json-schema-validator\"/>

@@ -60,10 +60,19 @@ script:
   - $CXX --version
 
   # put json.hpp to nlohmann
-  - mkdir -p nlohmann && wget https://github.com/nlohmann/json/releases/download/v3.6.0/json.hpp -O nlohmann/json.hpp
+  - mkdir -p nlohmann && wget https://github.com/nlohmann/json/releases/download/v3.8.0/json.hpp -O nlohmann/json.hpp
 
   # compile and execute unit tests
   - mkdir -p build && cd build
-  - cmake .. -DNLOHMANN_JSON_DIR=.. ${CMAKE_OPTIONS} -GNinja && cmake --build . --config Release
+  - cmake .. -Dnlohmann_json_DIR=.. ${CMAKE_OPTIONS} -GNinja && cmake --build . --config Release
+  - ctest -C Release -V -j
+  - cd ..
+
+  # Remove previous build and tests
+  - rm -r build
+
+  # Compile and execute with Hunter package manager instead of using local json.hpp
+  - mkdir -p build && cd build
+  - cmake .. -DHUNTER_ENABLED=ON ${CMAKE_OPTIONS} -GNinja && cmake --build . --config Release
   - ctest -C Release -V -j
   - cd ..

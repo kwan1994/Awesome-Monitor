@@ -82,12 +82,12 @@ QVariant TreeItem::getJsomRepresentation() {
 
 QModelIndex PluginTreeModel::index(int row, int column,
                                    const QModelIndex &parent) const {
-  qDebug() << parent << endl;
+  qDebug() << parent;
 
   auto parentItem = getItem(parent);
   if (!parentItem) return QModelIndex();
   auto childItem = parentItem->child(row);
-  qDebug() << createIndex(row, column, childItem) << endl;
+  qDebug() << createIndex(row, column, childItem);
   if (childItem) return createIndex(row, column, childItem);
   return QModelIndex();
 }
@@ -119,7 +119,7 @@ int PluginTreeModel::columnCount(const QModelIndex &parent) const { return 1; }
 QVariant PluginTreeModel::data(const QModelIndex &index, int role) const {
   if (!index.isValid()) return QVariant();
 
-  qDebug() << role << endl;
+  qDebug() << role;
   if (role == Qt::DisplayRole) {
     TreeItem *item = getItem(index);
     auto dataModelNode = dynamic_cast<DataModelTreeItem *>(item);
@@ -137,7 +137,7 @@ void PluginTreeModel::initialize() {
   beginResetModel();
   QFile modelFile(Utils::getModelFileSetting());
   if (!modelFile.exists() || !modelFile.open(QFile::OpenModeFlag::ReadOnly)) {
-    qDebug() << modelFile.error() << " " << modelFile.errorString() << endl;
+    qDebug() << modelFile.error() << " " << modelFile.errorString();
     return;
   }
   QJsonParseError e;
@@ -148,7 +148,7 @@ void PluginTreeModel::initialize() {
   }
 
   if (!jsonModel.isObject()) {
-    qDebug() << "Model file should start with object" << endl;
+    qDebug() << "Model file should start with object";
     endResetModel();
     return;
   }

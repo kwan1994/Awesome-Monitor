@@ -1,12 +1,12 @@
 add_library(AwesomeMonitor SHARED AppPlugin.h Plugin.h Plugin.cpp)
 
 
-target_link_libraries(AwesomeMonitor KF5::Plasma  Qt5::Qml Qt5::Quick Qt5::Gui Qt5::Widgets json-schema-validator)
+target_link_libraries(AwesomeMonitor KF5::Plasma nlohmann_json::nlohmann_json  Qt5::Qml Qt5::Quick Qt5::Gui Qt5::Widgets nlohmann_json_schema_validator)
 
 target_include_directories(
         AwesomeMonitor
         PUBLIC
-        ${header_dir_list} # Recursive
+        ../json/single_include/nlohmann
 )
 
 add_custom_command(

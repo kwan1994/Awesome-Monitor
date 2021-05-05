@@ -4,8 +4,6 @@
 
 #include "JsonToTreeParser.h"
 
-#include <wordexp.h>
-
 #include <QObject>
 #include <QQmlComponent>
 #include <QQmlEngine>
@@ -15,7 +13,7 @@
 #include <QQuickWindow>
 #include <QSettings>
 #include <QtCore>
-#include <json-schema.hpp>
+#include <nlohmann/json-schema.hpp>
 #include <sstream>
 #include <string>
 #include <variant>
@@ -68,7 +66,7 @@ Model *JsonToTreeParser::createModel(QString modelString) {
     qDebug() << "Validation of schema failed, here is why: " << e.what()
              << "\n";
     return createErrorModel(
-        QString("Validationsss of schema failed, here is why: ")
+        QString("Validations of schema failed, here is why: ")
             .append(e.what()));  // TODO: adderorModel
   }
 
@@ -113,7 +111,7 @@ Model *JsonToTreeParser::createModel(QString modelString) {
 nlohmann::json JsonToTreeParser::generateSchema(
     QString baseComponentsSchemasPath, QString dataModelsSchemasPath) {
   auto schemas = nlohmann::json::parse(schema);
-  auto &array = schemas["/definitions/Component/allOf/0/anyOf"_json_pointer];
+  auto &array = schemas["/definitions/Component/allOf/1/anyOf"_json_pointer];
   QDir directory(baseComponentsSchemasPath, "*.jsonSchema",
                  QDir::SortFlag::NoSort, QDir::Filter::Files);
   QDirIterator it(directory, QDirIterator::Subdirectories);
@@ -178,7 +176,7 @@ QSharedPointer<QObject> JsonToTreeParser::initializeComponet(
     qWarning() << "Component of type" << objectType;
     for (auto error : component->errors()) {
       errorString.append(error.toString());
-      qWarning() << error.toString() << endl;
+      qWarning() << error.toString();
     }
     throw invalid_argument(errorString.toStdString().c_str());
   }
@@ -227,10 +225,8 @@ QSharedPointer<QObject> JsonToTreeParser::initializeComponet(
     }
     if (!qmlProperty.write(value))
       qWarning() << "Property with name " << entry.key().c_str()
-                 << "wasnt writen into object of type" << objectType << ""
-                 << endl;
-    qDebug() << value << " " << qmlProperty.read() << qmlProperty.name()
-             << endl;
+                 << "wasnt writen into object of type" << objectType;
+    qDebug() << value << " " << qmlProperty.read() << qmlProperty.name();
   }
 
   parent->me = component;
@@ -329,10 +325,10 @@ void JsonToTreeParser::addDataModelsToComponent(QObject *pObject,
 
     if (!component->isReady()) {
       QStringList err;
-      qWarning() << "Component of type" << objectType << endl;
+      qWarning() << "Component of type" << objectType;
       err << "Component of type" << objectType << "\n";
       for (auto error : component->errors()) {
-        qWarning() << error.toString() << endl;
+        qWarning() << error.toString();
         err << error.toString() << "\n";
       }
       throw std::invalid_argument(err.join("").toStdString().c_str());
@@ -364,9 +360,8 @@ void JsonToTreeParser::addDataModelsToComponent(QObject *pObject,
 
       if (!qmlProperty.write(value))
         qWarning() << "Property with name " << entry.key().c_str()
-                   << "wasnt writen into object of type" << objectType << ""
-                   << endl;
-      qDebug() << value << " " << qmlProperty.read() << endl;
+                   << "wasnt writen into object of type" << objectType;
+      qDebug() << value << " " << qmlProperty.read();
     }
 
     dataModels.insert(entry.key().c_str(), QVariant::fromValue(widget));

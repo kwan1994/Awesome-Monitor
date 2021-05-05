@@ -1,0 +1,318 @@
+{
+    "$ref": "#/definitions/Model",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "Component": {
+            "allOf": [
+            {
+                    "properties": {
+                        "_": {
+                            "type": "string"
+                        },
+                        "childern": {
+                            "items": {
+                                "$ref": "#/definitions/Component"
+                            },
+                            "type": "array"
+                        },
+                        "dataModels": {
+                            "additionalProperties": {
+                                "$ref": "#/definitions/DataModel"
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "required": [
+                        "_"
+                    ],
+                    "type": "object"
+                },
+                {
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "_": {
+                                    "const": "Row"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "_": {
+                                    "const": "BorderImage"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "_": {
+                                    "const": "Image"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "_": {
+                                    "const": "ProgresBar"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "_": {
+                                    "const": "Column"
+                                },
+                                "anchors.horizontalCenter": {
+                                    "minimum": 0,
+                                    "type": [
+                                        "number",
+                                        "object"
+                                    ]
+                                },
+                                "spacing": {
+                                    "minimum": 0,
+                                    "type": "number"
+                                },
+                                "topPadding": {
+                                    "minimum": 0,
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "_": {
+                                    "const": "Rectangle"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "_": {
+                                    "const": "Text"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "additionalProperties": true,
+                            "properties": {
+                                "_": {
+                                    "enum": [
+                                        "AnimatedImage"
+                                    ]
+                                },
+                                "anchors.bottomMargin": {
+                                    "type": "number"
+                                },
+                                "anchors.centerIn": {
+                                    "properties": {
+                                        "type": {
+                                            "enum": [
+                                                "bind"
+                                            ]
+                                        },
+                                        "value": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "type",
+                                        "value"
+                                    ],
+                                    "type": "object"
+                                },
+                                "anchors.fill": {
+                                    "properties": {
+                                        "type": {
+                                            "enum": [
+                                                "bind"
+                                            ]
+                                        },
+                                        "value": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "type",
+                                        "value"
+                                    ],
+                                    "type": "object"
+                                },
+                                "anchors.leftMargin": {
+                                    "type": "number"
+                                },
+                                "anchors.rightMargin": {
+                                    "type": "number"
+                                },
+                                "anchors.topMargin": {
+                                    "type": "number"
+                                },
+                                "height": {
+                                    "type": "number"
+                                },
+                                "source": {
+                                    "properties": {
+                                        "type": {
+                                            "enum": [
+                                                "url"
+                                            ]
+                                        },
+                                        "value": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "visible": {
+                                    "type": "boolean"
+                                },
+                                "width": {
+                                    "type": "number"
+                                },
+                                "x": {
+                                    "type": "number"
+                                },
+                                "y": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "additionalProperties": true,
+                            "color": {
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "description": "Window component",
+                            "title": "Window",
+                            "type": "object"
+                        }
+                    ]
+                }
+            ]
+        },
+        "DataModel": {
+            "allOf": [
+                {
+                    "anyOf": [
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "title": "Battery",
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "object"
+                        }
+                    ]
+                },
+                {
+                    "properties": {
+                        "_": {
+                            "type": "string"
+                        },
+                        "transformFunc": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "type": {
+                                    "enum": [
+                                        "function"
+                                    ]
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "Model": {
+            "properties": {
+                "windows": {
+                    "items": {
+                        "$ref": "#/definitions/Window"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "windows"
+            ],
+            "type": "object"
+        },
+        "Window": {
+            "properties": {
+                "_": {
+                    "allOf": [
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "childern": {
+                    "items": {
+                        "$ref": "#/definitions/Component"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "_"
+            ],
+            "type": "object"
+        }
+    },
+    "name": "Component"
+}

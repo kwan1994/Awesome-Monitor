@@ -85,9 +85,7 @@ inline std::string schema =
       },
           "Component":{
              "allOf":[
-                {
 
-            },
             {
               "type": "object",
               "properties": {
@@ -107,6 +105,8 @@ inline std::string schema =
               "required": [
                 "_"
               ]
+            }, {
+              "anyOf": []
             }
           ]
         },"Model": {
