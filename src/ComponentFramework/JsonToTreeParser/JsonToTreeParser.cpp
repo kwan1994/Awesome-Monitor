@@ -48,12 +48,11 @@ Model *JsonToTreeParser::createModelFromFile(QString pathToModel) {
 Model *JsonToTreeParser::createModel(QString modelString) {
   Model *model = new Model;
 
-  auto schema = generateSchema(Utils::getBasicComponentFolder(),
-                               Utils::getDataModelsFolderSetting());
-
   nlohmann::json_schema::json_validator validator;  // create validator
   nlohmann::json json;
   try {
+    auto schema = generateSchema(Utils::getBasicComponentFolder(),
+                                 Utils::getDataModelsFolderSetting());
     json = nlohmann::json::parse(modelString.toStdString());
   } catch (exception &e) {
     qDebug() << "Error parsing model json" << e.what();
@@ -116,12 +115,21 @@ nlohmann::json JsonToTreeParser::generateSchema(
                  QDir::SortFlag::NoSort, QDir::Filter::Files);
   QDirIterator it(directory, QDirIterator::Subdirectories);
 
+  QString st;
   while (it.hasNext()) {
-    auto st = it.next();
-    QFile file(st);
-    if (file.open(QFile::ReadOnly)) {
-      array.push_back(
-          nlohmann::json::parse(QString(file.readAll()).toStdString()));
+    try {
+      st = it.next();
+      QFile file(st);
+      if (file.open(QFile::ReadOnly)) {
+        array.push_back(
+            nlohmann::json::parse(QString(file.readAll()).toStdString()));
+      }
+    } catch (const std::exception &e) {
+      throw invalid_argument(QString(e.what())
+                                 .append("in file ")
+                                 .append(st)
+                                 .toStdString()
+                                 .c_str());
     }
   }
 
