@@ -63,6 +63,7 @@ class Plugin : public QObject {
   Q_INVOKABLE bool saveToFile(QJsonObject json);
   Q_INVOKABLE void setHideWindows();
   Q_INVOKABLE bool tryCreateDefaultModelFile(QString);
+  Q_INVOKABLE bool tryMoveFolderToNewLocation(QString source, QString output);
   ~Plugin();
  signals:
   void intializing();

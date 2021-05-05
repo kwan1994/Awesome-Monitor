@@ -109,3 +109,10 @@ bool Plugin::tryCreateDefaultModelFile(QString path) {
 
   return false;
 }
+
+bool Plugin::tryMoveFolderToNewLocation(QString source, QString output) {
+  QDir dir;
+  return dir.rmdir(Utils::expandHome(output))
+             ? dir.rename(Utils::expandHome(source), Utils::expandHome(output))
+             : false;
+}

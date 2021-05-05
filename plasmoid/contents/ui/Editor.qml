@@ -404,7 +404,7 @@ Qt2.ApplicationWindow {
                                 Image {
                                     Layout.alignment: Qt.AlignVCenter
                                     sourceSize: Qt.size(20, 20)
-                                    source: model.display.iconPath !== ""?model.display.iconPath:"../images/defaultComponentIcon.svg"
+                                    source: model.display.iconPath !== ""?model.display.iconPath:"../icons/defaultComponentIcon.svg"
                                 }
                                 Text {
                                     elide: Text.ElideRight

@@ -60,9 +60,14 @@ Item {
         selectExisting: true
         selectFolder: true
         onAccepted: {
+            let origin = dataModelsFolder.text;
+            let newOrigin = urlToPath(fileDialogModels.fileUrl)
+            if(!Plugin.tryMoveFolderToNewLocation(origin,newOrigin)){
+                console.log("dasd");
+            }
+            dataModelsFolder.text = newOrigin;
 
-            dataModelsFolder.text = urlToPath(fileDialogModels.fileUrl)
-            Qt.quit()
+            Qt.quit();
         }
     }
 
@@ -72,8 +77,13 @@ Item {
         selectFolder: true
         onAccepted: {
 
-            dataModelsFolder.text = urlToPath(fileDialogComponents.fileUrl)
-            Qt.quit()
+            let origin = basicComponentsFolder.text;
+            let newOrigin = urlToPath(fileDialogComponents.fileUrl);
+            if(!Plugin.tryMoveFolderToNewLocation(origin,newOrigin)){
+                console.log("dasdas");
+            }
+            basicComponentsFolder.text = newOrigin;
+            Qt.quit();
         }
     }
 
@@ -146,9 +156,10 @@ Item {
                 Qt2.ToolTip.text: "File from which Awesome Monitor is Loaded"
                 width: textFieldWidth
                 id: modelFile
-                onEditingFinished:  root.changed= true;
+                onEditingFinished:  root.changed = true;
 
             }
+
             Button {
                 onClicked: {
                     fileDialogJson.open()
