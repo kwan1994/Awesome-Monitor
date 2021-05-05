@@ -38,6 +38,7 @@ cmake-build-debug/
 *.user
 
 *CMakeFiles*
+*CMakeCache.txt
 *cmake*
 *Makefile*
 regenerateindex.sh
