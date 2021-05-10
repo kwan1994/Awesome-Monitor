@@ -1,1 +1,22 @@
-{"type": "object"}
+{
+  "type": "object",
+  "properties":{
+    "_":{
+      "enum":[
+        "BatteryStatusDataModel"
+      ]
+    },
+    "transformFunc":{
+      "type":"object",
+      "properties":{
+        "type":{"enum":["function"]},
+        "value":{"type":"string"}
+      },
+      "required":["type","value"]
+    },
+    "timerInterval":{"type":"number"},
+    "batteryName": {"type": "string"}
+  },
+  "required":["_","batteryName"]
+
+}

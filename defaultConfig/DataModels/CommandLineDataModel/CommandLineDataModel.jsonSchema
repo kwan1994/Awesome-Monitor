@@ -17,6 +17,6 @@
     "timerInterval":{"type":"number"},
     "command":{"type":"string"}
     },
-    "required":["_"]
+    "required":["_","command"]
 
 }

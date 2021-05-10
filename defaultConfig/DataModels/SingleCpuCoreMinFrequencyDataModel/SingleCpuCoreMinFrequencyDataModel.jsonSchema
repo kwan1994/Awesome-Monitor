@@ -17,6 +17,6 @@
     "timerInterval":{"type":"number"},
     "acpiId":{"type":"string"}
     },
-    "required":["_"]
+    "required":["_","acpiId"]
 
 }
