@@ -68,8 +68,6 @@ QVariant TreeItem::getJsomRepresentation() {
   for (auto child : childItems) {
     auto dataModelNode = dynamic_cast<DataModelTreeItem *>(child);
     if (dataModelNode != nullptr) {
-      qDebug()
-          << QJsonDocument(QVariant(child->m_formData).toJsonObject()).toJson();
       dataModels.insert(dataModelNode->m_key, dataModelNode->m_formData);
     } else {
       childernRep.append(child->getJsomRepresentation());
@@ -82,12 +80,9 @@ QVariant TreeItem::getJsomRepresentation() {
 
 QModelIndex PluginTreeModel::index(int row, int column,
                                    const QModelIndex &parent) const {
-  qDebug() << parent;
-
   auto parentItem = getItem(parent);
   if (!parentItem) return QModelIndex();
   auto childItem = parentItem->child(row);
-  qDebug() << createIndex(row, column, childItem);
   if (childItem) return createIndex(row, column, childItem);
   return QModelIndex();
 }
@@ -111,7 +106,6 @@ TreeItem *PluginTreeModel::getItem(const QModelIndex &index) const {
 int PluginTreeModel::rowCount(const QModelIndex &parent) const {
   const auto parentItem = getItem(parent);
 
-  qDebug() << (parentItem ? parentItem->childCount() : 0);
   return parentItem ? parentItem->childCount() : 0;
 }
 int PluginTreeModel::columnCount(const QModelIndex &parent) const { return 1; }
@@ -119,7 +113,6 @@ int PluginTreeModel::columnCount(const QModelIndex &parent) const { return 1; }
 QVariant PluginTreeModel::data(const QModelIndex &index, int role) const {
   if (!index.isValid()) return QVariant();
 
-  qDebug() << role;
   if (role == Qt::DisplayRole) {
     TreeItem *item = getItem(index);
     auto dataModelNode = dynamic_cast<DataModelTreeItem *>(item);
@@ -160,11 +153,9 @@ void PluginTreeModel::initialize() {
   QStack<QPair<TreeItem *, QJsonValue>> stack;
 
   stack.push(QPair(rootItem, jsonObject["windows"].toArray()));
-  qDebug() << "init";
   while (!stack.isEmpty()) {
     auto item = stack.pop();
     auto jsonArray = item.second;
-    qDebug() << item.second.toString();
     addChildern(jsonArray, stack, item, e, jsonModel);
     addDataModels(item.second, item.first);
   }
@@ -177,7 +168,6 @@ void PluginTreeModel::addChildern(const QJsonValue &jsonObject,
                                   QJsonParseError &e,
                                   QJsonDocument &jsonModel) {
   auto treeItem = item.first;
-  qDebug() << jsonObject.type();
   if (!jsonObject.isArray()) return;
   for (auto jsonNode : jsonObject.toArray()) {
     if (!jsonNode.isObject()) continue;
@@ -188,7 +178,6 @@ void PluginTreeModel::addChildern(const QJsonValue &jsonObject,
     auto compType = formData["_"].toString();
 
     if (!filePathsToQmlComponents.contains(compType)) {
-      qDebug() << compType;
       continue;
     }
 
@@ -196,28 +185,21 @@ void PluginTreeModel::addChildern(const QJsonValue &jsonObject,
     formData.remove("dataModels");
     QFile file(filePathsToQmlComponents[compType]);
     if (!file.open(QFile::OpenModeFlag::ReadOnly)) {
-      qDebug() << file.errorString();
       continue;
     }
 
     auto schema = file.readAll();
     if (schema.isEmpty()) {
-      qDebug() << "empty echama" << compType;
-
       continue;
     }
 
     jsonModel = QJsonDocument::fromJson(schema, &e);
     if (e.error != QJsonParseError::NoError) {
-      qDebug() << "cant read json" << compType;
-
       continue;
     }
 
     if (jsonModel.isEmpty() || !jsonModel.isObject() ||
         jsonModel.object().count() <= 0) {
-      qDebug() << "cant read object epty" << compType;
-
       continue;
     }
 
@@ -231,7 +213,6 @@ void PluginTreeModel::addChildern(const QJsonValue &jsonObject,
       stack.push(QPair(child, jsonNode.toObject()["childern"].toArray()));
     }
     if (hasDataModels(jsonNode)) {
-      qDebug() << jsonNode.toObject()["dataModels"].toObject().keys();
       stack.push(QPair(child, jsonNode.toObject()["dataModels"].toObject()));
     }
   }
@@ -252,28 +233,22 @@ void PluginTreeModel::addDataModels(QJsonValue value, TreeItem *pItem) {
 
     QFile file(filePathsToQmlDataModels[compType]);
     if (!file.open(QFile::OpenModeFlag::ReadOnly)) {
-      qDebug() << "cant read" << compType;
       continue;
     }
 
     auto schema = file.readAll();
     if (schema.isEmpty()) {
-      qDebug() << "schemaEmpty" << compType;
       continue;
     }
 
     QJsonParseError e;
     auto jsonModel = QJsonDocument::fromJson(schema, &e);
     if (e.error != QJsonParseError::NoError) {
-      qDebug() << "cant read json" << compType;
-
       continue;
     }
 
     if (jsonModel.isEmpty() || !jsonModel.isObject() ||
         jsonModel.object().count() <= 0) {
-      qDebug() << "empty object" << compType;
-
       continue;
     }
     auto jsonSchema = jsonModel.object().toVariantMap();
@@ -299,31 +274,16 @@ bool PluginTreeModel::hasChildern(const QJsonValue &jsonNode) const {
 PluginTreeModel::PluginTreeModel() {
   filePathsToQmlComponents = JsonToTreeParser::createFileMap(
       Utils::getBasicComponentFolder(), "*.jsonSchema");
-  qDebug(QStringList(filePathsToQmlComponents.values())
-             .join(" ")
-             .toStdString()
-             .c_str());
-  qDebug() << "datamOdels"
-           << QStringList(filePathsToQmlDataModels.values()).join(" ");
   filePathsToQmlDataModels = JsonToTreeParser::createFileMap(
-
       Utils::getDataModelsFolderSetting(), "*.jsonSchema");
-  qDebug(QStringList(filePathsToQmlDataModels.values())
-             .join(" ")
-             .toStdString()
-             .c_str());
   initialize();
 }
 bool PluginTreeModel::insertRow(int row, const QModelIndex &parent,
                                 QString schemaPath) {
   auto pItem = getItem(parent);
-  qDebug() << pItem;
-  qDebug() << schemaPath;
-  qDebug() << row;
   if (!pItem) return false;
   QFile file(schemaPath);
   if (!file.open(QFile::ReadOnly)) {
-    qDebug() << "ReadOnly";
     return false;
   }
   auto name = (QFileInfo(file)).baseName();
@@ -332,17 +292,13 @@ bool PluginTreeModel::insertRow(int row, const QModelIndex &parent,
   QJsonParseError e;
   auto jsonSchemaDocument = QJsonDocument::fromJson(schemaFormData, &e);
   if (e.error != QJsonParseError::NoError) {
-    qDebug() << "error";
-    ;
     return false;
   }
   if (!jsonSchemaDocument.isObject()) {
-    qDebug() << "isObject";
     return false;
   }
   auto jsonSchemaObject = jsonSchemaDocument.object();
   if (jsonSchemaObject.isEmpty()) {
-    qDebug() << "isEmptyObject";
     return false;
   }
   beginInsertRows(parent, row, row);

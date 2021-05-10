@@ -35,7 +35,11 @@ class ComponentListModel : public QAbstractListModel {
                                 "SingleCpuCoreMinFrequencyDataModel",
                                 "SingleCpuCoreTemperatureDataModel",
                                 "SingleCpuCoreUtilisationDataModel",
-                                "UploadSpeedDataModel"};
+                                "UploadSpeedDataModel",
+                                "AvailableSwapSpaceDataModel",
+                                "AvailableMemoryDataModel",
+                                "FreeSwapSpaceDataModel",
+                                "FreeMemoryDataModel"};
 
   QStringList basicComponentNames = {
       "Text",  "ProgresBar",  "Row",           "Window",   "Column",
