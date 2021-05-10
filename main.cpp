@@ -1,29 +1,18 @@
 
+#include <QCoreApplication>
+#include <QDebug>
+#include <QObject>
+#include <QQmlComponent>
 
-#include <arpa/inet.h>
-#include <net/if.h>
-#include <netinet/in.h>
-#include <stdio.h>
-#include <string.h> /* for strncpy */
-#include <sys/ioctl.h>
-#include <sys/socket.h>
-#include <sys/types.h>
-#include <unistd.h>
-
-#include <QAbstractItemModelTester>
-#include <QApplication>
-#include <QLibraryInfo>
-#include <QtCore/QFile>
-#include <QtQml/QQmlApplicationEngine>
-#include <string>
-
+#include "QQmlEngine"
+#include "src/Components/DataComponents/FreeMemoryDataModel/FreeMemoryDataModel.h"
 using namespace std;
 
 int main(int argc, char **args) {
   //  QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
   //  QCoreApplication::setAttribute(Qt::AA_UseSoftwareOpenGL);
   //
-  // QApplication application(argc, args);
+  QCoreApplication application(argc, args);
   //  cout << QFile::exists(QStandardPaths::locate(
   //              QStandardPaths::StandardLocation::ConfigLocation,
   //              "AwesomeMonitor", QStandardPaths::LocateOption::LocateFile))
@@ -35,7 +24,18 @@ int main(int argc, char **args) {
   //  *)&ifr.ifr_addr)->sin_addr));
   //  auto sp = new Plugin();
   //  sp->initializePlugin();
-  // return application.exec();
+  //
 
-  return 0;
+  QQmlComponent c(new QQmlEngine,
+                  "/home/kwan/0CC4-8589/AwesomeMonitor/defaultConfig/"
+                  "DataModels/FreeMemoryDataModel/"
+                  "FreeMemoryDataModel.qml");
+
+  qDebug() << c.errorString();
+
+  auto dataModel = qobject_cast<FreeMemoryDataModel *>(c.create());
+  QObject::connect(dataModel, &FreeMemoryDataModel::currentValueChanged,
+                   [](QVariant value) -> void { qDebug() << value; });
+
+  return application.exec();
 }

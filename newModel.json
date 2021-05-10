@@ -209,7 +209,7 @@
                                     "dataModels": {
                                         "valueModel": {
                                             "_": "CommandLineDataModel",
-                                            "command": "awk '{print int($1/3600)\":\"int(($1%3600)/60)\":\"int($1%60)}' /proc/uptime",
+                                            "command": "awk '{print int($1/3600)\"h \" int(($1%3600)/60)\"m  \"int($1%60)\"s \"}' /proc/uptime",
                                             "name": "asdasd",
                                             "timerInterval": 1000,
                                             "transformFunc": {
@@ -220,7 +220,7 @@
                                     }
                                 }
                             ],
-                            "spacing": 170
+                            "spacing": 140
                         },
                         {
                             "_": "Row",

@@ -7,7 +7,7 @@
 #include "qdebug.h"
 
 CommandLineDataModel::CommandLineDataModel(QObject *parent)
-    : DataModelBase(parent, "defaultReturnTransformer") {
+    : DataModelBase(parent) {
   process = new QProcess(this);
   QObject::connect(_timer, &QTimer::timeout,
                    [this]() -> void { computeValue(); });

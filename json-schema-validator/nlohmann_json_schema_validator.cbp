@@ -5,7 +5,7 @@
 		<Option title="nlohmann_json_schema_validator"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Qml\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Network\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Quick\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5QmlModels\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Test\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Plasma\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Package\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5CoreAddons\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Service\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Config\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Xml\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5DBus\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5WindowSystem\;CMake Files\..\..\..\..\usr\lib64\cmake\Boost-1.75.0\;CMake Files\..\..\..\..\usr\lib64\cmake\boost_headers-1.75.0\;CMake Files\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.75.0\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\ECM\;CMake Files\..\..\..\..\usr\share\ECM\cmake\;CMake Files\..\..\..\..\usr\share\ECM\modules\;CMake Files\..\..\..\..\usr\share\ECM\kde-modules\;CMake Files\_deps\;CMake Files\_deps\json-src\;CMake Files\json-schema-validator\;CMake Files\src\;CMake Files\src\Editor\;CMake Files\src\Editor\Models\;CMake Files\src\Editor\Models\ComponentListModel\;CMake Files\src\Editor\Models\PluginTreeModel\;CMake Files\src\ComponentFramework\;CMake Files\src\ComponentFramework\ApplicationModel\;CMake Files\src\ComponentFramework\JsonToTreeParser\;CMake Files\src\ComponentFramework\JsonValueConverter\;CMake Files\src\Components\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Qml\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Network\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Quick\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5QmlModels\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Plasma\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Package\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5CoreAddons\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Service\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5Config\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Xml\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5DBus\;CMake Files\..\..\..\..\usr\lib64\cmake\KF5WindowSystem\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\ECM\;CMake Files\..\..\..\..\usr\share\ECM\cmake\;CMake Files\..\..\..\..\usr\share\ECM\modules\;CMake Files\..\..\..\..\usr\share\ECM\kde-modules\;CMake Files\_deps\;CMake Files\_deps\json-src\;CMake Files\json-schema-validator\;CMake Files\src\;CMake Files\src\Editor\;CMake Files\src\Editor\Models\;CMake Files\src\Editor\Models\ComponentListModel\;CMake Files\src\Editor\Models\PluginTreeModel\;CMake Files\src\ComponentFramework\;CMake Files\src\ComponentFramework\ApplicationModel\;CMake Files\src\ComponentFramework\JsonToTreeParser\;CMake Files\src\ComponentFramework\JsonValueConverter\;CMake Files\src\Components\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/kwan/0CC4-8589/AwesomeMonitor/json-schema-validator"/>
@@ -72,9 +72,6 @@
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/BoostDetectToolset-1.75.0.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/Qt5/Qt5Config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5\"/>
@@ -319,15 +316,6 @@
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/Qt5QmlModels/Qt5QmlModelsConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5QmlModels\"/>
 		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/Qt5Test/Qt5TestConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Test\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/Qt5Test/Qt5TestConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Test\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/Qt5Test/Qt5TestConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Test\"/>
-		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/KF5Plasma/KF5PlasmaConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\KF5Plasma\"/>
 		</Unit>
@@ -468,30 +456,6 @@
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/KF5WindowSystem/KF5WindowSystemTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\KF5WindowSystem\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/Boost-1.75.0/BoostConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Boost-1.75.0\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/Boost-1.75.0/BoostConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Boost-1.75.0\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/boost_headers-1.75.0/boost_headers-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\boost_headers-1.75.0\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/boost_headers-1.75.0/boost_headers-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\boost_headers-1.75.0\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/boost_filesystem-1.75.0/boost_filesystem-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.75.0\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/boost_filesystem-1.75.0/boost_filesystem-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.75.0\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/boost_filesystem-1.75.0/libboost_filesystem-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.75.0\"/>
-		</Unit>
-		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/lib64/cmake/boost_filesystem-1.75.0/libboost_filesystem-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\boost_filesystem-1.75.0\"/>
 		</Unit>
 		<Unit filename="/home/kwan/0CC4-8589/AwesomeMonitor/../../../../usr/share/ECM/cmake/ECMConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\ECM\cmake\"/>

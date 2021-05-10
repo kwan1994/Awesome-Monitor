@@ -28,8 +28,8 @@ BatteryStatusDataModel::BatteryStatusDataModel(QObject *parent)
 
 void BatteryStatusDataModel::computeValue() {
   QFile file(files.first());
-  if (!file.open(QFile::ReadOnly)) setCurrentValue(State::Full);
-  setCurrentValue(values[QString(file.readAll()).trimmed()]);
+  if (!file.open(QFile::ReadOnly)) setCurrentValue("Full");
+  setCurrentValue(QString(file.readAll()).trimmed());
 }
 
 QString BatteryStatusDataModel::batteryName() { return _batteryName; }

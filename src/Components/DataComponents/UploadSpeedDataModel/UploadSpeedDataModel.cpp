@@ -22,17 +22,6 @@ void UploadSpeedDataModel::setInterfaceName(QString interfaceName) {
 }
 void UploadSpeedDataModel::initialize() {
   interfaceTraficPaths.clear();
-  if (_interfaceName == "") {
-    QDirIterator it(QDir("/sys/class/net"), QDirIterator::Subdirectories);
-    while (it.hasNext()) {
-      auto path = it.next();
-      auto statPath = path + "/statistics/rx_bytes";
-      if (QFile::exists(statPath)) {
-        interfaceTraficPaths << statPath;
-      }
-    }
-    return;
-  }
   auto posiblePath =
       QString("/sys/class/net/%0/statistics/rx_bytes").arg(_interfaceName);
   if (QFile::exists(posiblePath)) {
@@ -42,12 +31,13 @@ void UploadSpeedDataModel::initialize() {
 void UploadSpeedDataModel::computeValue() {
   long long current = 0;
   for (auto path : interfaceTraficPaths) {
+    qDebug() << "neco";
     QFile file(path);
     if (file.open(QFile::ReadOnly)) {
-      current += QString(file.readAll()).toInt();
+      current += QString(file.readAll()).toLongLong();
     }
   }
-  auto transfered = current - previous;
+  auto transfered = (current - previous) / (_timerInterval / 1000);
   previous = current;
   qDebug() << transfered;
   setCurrentValue(transfered, true);

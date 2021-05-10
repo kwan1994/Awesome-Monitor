@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 3.13)
 project(AwesomeMonitor)
 SET(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_CXX_STANDARD 17)
-find_package(Qt5 5.15.2 COMPONENTS REQUIRED  Widgets Qml Quick Gui Test)
-find_package(ECM REQUIRED NO_MODULE)
+find_package(Qt5 5.15.2 EXACT COMPONENTS REQUIRED  Widgets Qml Quick Gui)
+find_package(ECM 5.81.0 EXACT REQUIRED NO_MODULE)
 # Needed by find_package(KF5Plasma) below.
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_MODULE_PATH})
 #set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 
-find_package(KF5Plasma REQUIRED plasma)
+find_package(KF5Plasma 5.81.0 EXACT  REQUIRED plasma)
 
 
 # set this path to schema-test-suite to get tests compiled - optional
@@ -47,7 +47,8 @@ set(CMAKE_AUTOMOC ON)
 
 add_subdirectory(src)
 
-
+add_executable(awesomeMonitor-bin main.cpp)
+target_link_libraries(awesomeMonitor-bin awesomeComponentsPlugin Qt5::Core Qt5::Qml AwesomeMonitor)
 
 #add_library(AwesomeMonitor
 #        SHARED

@@ -12,18 +12,17 @@
 
 #include "ComponentUtils/UtilsWrapper.h"
 #include "ComponentUtils/utils.h"
+#include "DataComponents/AvailableMemoryDataModel/AvailableMemoryDataModel.h"
+#include "DataComponents/AvailableSwapSpaceDataModel/AvailableSwapSpaceDataModel.h"
 #include "DataComponents/BatteryCapacityDataModel/BatteryCapacityDataModel.h"
 #include "DataComponents/BatteryStatusDataModel/BatteryStatusDataModel.h"
 #include "DataComponents/CommandLineDataModel/CommandLineDataModel.h"
-#include "DataComponents/CpuCurrentFrequencyDataModel/CpuCurrentFrequencyDataModel.h"
-#include "DataComponents/CpuMaxFrequencyDataModel/CpuMaxFrequencyDataModel.h"
-#include "DataComponents/CpuMaxTemperatureDataModel/CpuMaxTemperatureDataModel.h"
-#include "DataComponents/CpuMinFrequencyDataModel/CpuMinFrequencyDataModel.h"
-#include "DataComponents/CpuTemperatureDataModel/CpuTemperatureDataModel.h"
-#include "DataComponents/CpuUtilisationDataModel/CpuUtilisationDataModel.h"
 #include "DataComponents/DownloadSpeedDataModel/DownloadSpeedDataModel.h"
-#include "DataComponents/SingleCpuCoreMaxTemperatureDataModel/SingleCpuCoreMaxTemperatureDataModel.h"
-#include "DataComponents/SingleCpuCoreTemperatureDataModel/SingleCpuCoreTemperatureDataModel.h"
+#include "DataComponents/FreeMemoryDataModel/FreeMemoryDataModel.h"
+#include "DataComponents/FreeSwapSpaceDataModel/FreeSwapSpaceDataModel.h"
+#include "DataComponents/SingleCpuCoreCurrentFrequencyDataModel/SingleCpuCoreCurrentFrequencyDataModel.h"
+#include "DataComponents/SingleCpuCoreMaxFrequencyDataModel/SingleCpuCoreMaxFrequencyDataModel.h"
+#include "DataComponents/SingleCpuCoreMinFrequencyDataModel/SingleCpuCoreMinFrequencyDataModel.h"
 #include "DataComponents/SingleCpuCoreUtilisationDataModel/SingleCpuCoreUtilisationDataModel.h"
 #include "DataComponents/UploadSpeedDataModel/UploadSpeedDataModel.h"
 
@@ -42,28 +41,15 @@ class AwesomeComponentsPlugin : public QQmlExtensionPlugin {
 
   void registerTypes(const char* uri) override {
     // Q_ASSERT(uri == QString("CpuTemperatureDataModel"));
-    qmlRegisterType<CpuTemperatureDataModel>(uri, 1, 0,
-                                             "CpuTemperatureDataModel");
-    qmlRegisterType<SingleCpuCoreTemperatureDataModel>(
-        uri, 1, 0, "SingleCpuCoreTemperatureDataModel");
-    qmlRegisterType<CpuMaxTemperatureDataModel>(uri, 1, 0,
-                                                "CpuMaxTemperatureDataModel");
-    qmlRegisterType<SingleCpuCoreMaxTemperatureDataModel>(
-        uri, 1, 0, "SingleCpuCoreMaxTemperatureDataModel");
-    qmlRegisterType<CpuCurrentFrequencyDataModel>(
-        uri, 1, 0, "CpuCurrentFrequencyDataModel");
+    qmlRegisterType<SingleCpuCoreMinFrequencyDataModel>(
+        uri, 1, 0, "SingleCpuCoreMinFrequencyDataModel");
+
     qmlRegisterType<SingleCpuCoreCurrentFrequencyDataModel>(
         uri, 1, 0, "SingleCpuCoreCurrentFrequencyDataModel");
-    qmlRegisterType<CpuMaxFrequencyDataModel>(uri, 1, 0,
-                                              "CpuMaxFrequencyDataModel");
     qmlRegisterType<SingleCpuCoreMaxFrequencyDataModel>(
         uri, 1, 0, "SingleCpuCoreMaxFrequencyDataModel");
-    qmlRegisterType<CpuMinFrequencyDataModel>(uri, 1, 0,
-                                              "CpuMinFrequencyDataModel");
     qmlRegisterType<SingleCpuCoreUtilisationDataModel>(
         uri, 1, 0, "SingleCpuCoreUtilisationDataModel");
-    qmlRegisterType<CpuUtilisationDataModel>(uri, 1, 0,
-                                             "CpuUtilisationDataModel");
 
     qmlRegisterType<BatteryStatusDataModel>(uri, 1, 0,
                                             "BatteryStatusDataModel");
@@ -71,9 +57,18 @@ class AwesomeComponentsPlugin : public QQmlExtensionPlugin {
     qmlRegisterType<DownloadSpeedDataModel>(uri, 1, 0,
                                             "DownloadSpeedDataModel");
     qmlRegisterType<BatteryCapacityDataModel>(uri, 1, 0,
-                                              "BatteryCapacityStatusDataModel");
+                                              "BatteryCapacityDataModel");
     qmlRegisterType<UtilsWrapper>(uri, 1, 0, "Utils");
     qmlRegisterType<CommandLineDataModel>(uri, 1, 0, "CommandLineDataModel");
+    qmlRegisterType<FreeSwapSpaceDataModel>(uri, 1, 0,
+                                            "FreeSwapSpaceDataModel");
+    qmlRegisterType<AvailableSwapSpaceDataModel>(uri, 1, 0,
+                                                 "AvailableSwapSpaceDataModel");
+
+    qmlRegisterType<AvailableMemoryDataModel>(uri, 1, 0,
+                                              "AvailableMemoryDataModel");
+
+    qmlRegisterType<FreeMemoryDataModel>(uri, 1, 0, "FreeMemoryDataModel");
   }
 };
 

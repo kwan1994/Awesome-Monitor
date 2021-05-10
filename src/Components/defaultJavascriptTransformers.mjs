@@ -9,7 +9,6 @@ export function defaultCpuFrequencyTransformer(value) {
 }
 
 export function defaultIntPercentTransformer(value) {
-
     return Math.trunc(value * 100)
 }
 
@@ -18,5 +17,5 @@ export function defaultReturnTransformer(value){
 }
 
 export function defautlSpeedTransformer(value) {
-    return value/1000000;
+    return value/1000;
 }

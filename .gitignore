@@ -44,3 +44,11 @@ cmake-build-debug/
 regenerateindex.sh
 prefix.sh
 *_autogen*
+*CpuCurrentFrequencyDataModel*
+*CpuMaxTemperatureDataModel*
+*CpuMinFrequencyDataModel*
+*CpuMaxFrequencyDataModel*
+*CpuTemperatureDataModel*
+*CpuUtilisationDataModel*
+
+

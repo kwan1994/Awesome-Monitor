@@ -1,47 +1,265 @@
 {
-  "type": "object",
-  "properties": {
-    "_": {"enum": ["AnimatedImage"]},
-    "width": {"type": "number"},
-    "height": {"type": "number"},
-    "x": {"type": "number"},
-    "y": {"type": "number"},
-    "visible": {"type": "boolean"},
-    "anchors.centerIn": {"type": "object",
-
-      "properties": {
-        "type": { "enum" : ["bind"]},
-        "value": {"type": "string"}
+   "type":"object",
+   "properties":{
+      "_":{
+         "enum":[
+            "AnimatedImage"
+         ]
       },
-      "required": ["type", "value"]
-    },
-    "anchors.fill": {"type": "object",
-
-      "properties": {
-        "type": { "enum" : ["bind"]},
-        "value": {"type": "string"}
+      "width":{
+         "type":[
+            "number",
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
       },
-      "required": ["type", "value"]
-    },
-    "anchors.rightMargin": {"type": "number"},
-    "anchors.leftMargin": {"type": "number"},
-    "anchors.topMargin": {"type": "number"},
-    "anchors.bottomMargin": {"type": "number"},
-    "anchors.fill": {"type": "object",
-
-      "properties": {
-        "type": { "enum" : ["bind"]},
-        "value": {"type": "string"}
+      "height":{
+         "type":[
+            "number",
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
       },
-      "required": ["type", "value"]
-    },
-    "source":{"type": "object",
-      "properties": {
-        "type": { "enum" : ["url"]},
-        "value": {"type": "string"}
+      "x":{
+         "type":[
+            "number",
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "y":{
+         "type":[
+            "number",
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "visible":{
+         "type":[
+            "boolean",
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "anchors.centerIn":{
+         "type":"object",
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "anchors.fill":{
+         "type":"object",
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "anchors.rightMargin":{
+         "type":[
+            "number",
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "anchors.leftMargin":{
+         "type":[
+            "number",
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "anchors.topMargin":{
+         "type":[
+            "number",
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "anchors.bottomMargin":{
+         "type":[
+            "number",
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "anchors.fill":{
+         "type":"object",
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
+      },
+      "source":{
+         "type":[
+            "object"
+         ],
+         "properties":{
+            "type":{
+               "enum":[
+                  "bind",
+                  "url"
+               ]
+            },
+            "value":{
+               "type":"string"
+            }
+         },
+         "required":[
+            "type",
+            "value"
+         ]
       }
-    }
-  },
-  "additionalProperties": true
-
+   },
+   "additionalProperties":true,
+   "required":[
+      "_"
+   ]
 }

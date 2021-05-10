@@ -3,8 +3,10 @@
 //
 
 #include "SingleCpuCoreCurrentFrequencyDataModel.h"
+
 #include <QtCore/QFile>
 #include <iostream>
+
 #include "../../ComponentUtils/utils.h"
 using namespace std;
 
@@ -21,6 +23,8 @@ SingleCpuCoreCurrentFrequencyDataModel::SingleCpuCoreCurrentFrequencyDataModel(
   _acpiId = acpiId;
   Initialize();
 }
+
+
 
 void SingleCpuCoreCurrentFrequencyDataModel::Initialize() {
   sensorPath = QString("/sys/devices/system/cpu/cpu%0/cpufreq/scaling_cur_freq")

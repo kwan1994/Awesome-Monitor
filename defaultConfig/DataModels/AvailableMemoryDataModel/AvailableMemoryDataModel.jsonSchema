@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties":{
+    "_":{
+         "enum":[
+            "AvailableMemoryDataModel"
+         ]
+    },
+    "transformFunc":{
+        "type":"object",
+        "properties":{
+            "type":{"enum":["function"]},
+            "value":{"type":"string"}
+        },
+        "required":["type","value"]
+    },
+    "timerInterval":{"type":"number"}
+    },
+    "required":["_"]
+
+}

@@ -12,34 +12,12 @@ Item {
         source: "../images/plasmoidIcon.svg"
     }
 
+    Plasmoid.fullRepresentation:Image {
 
-    Plasmoid.fullRepresentation: Rectangle {
-        visible: false
-        height: 20
-        width: 40
-        color: "blue"
-        TextArea {
-            id: s;
-            text : "sadasd"
-            onFocusChanged: {
-                set.test = s.text
-
-            }
-        }
-
-
-
-        Component.onCompleted: {
-
-            Plugin.resetPlugin();
-
-        }
+        source: "../images/plasmoidIcon.svg"
     }
 
-    Settings {
-        id: set
-        fileName: StandardPaths.locate(StandardPaths.ConfigLocation,"AwesomeMonitor",StandardPaths.LocateFile).toString().substring(7)
-    }
+
 
     function action_reset(){
         Plugin.resetPlugin();
@@ -52,17 +30,5 @@ Item {
 
     }
 
-    Component.onDestruction: plugin.deletePlugin()
-
-    Connections {
-        target: plasmoid.configuration
-        onValueChanged: {
-            console.log(key,value)
-        }
-    }
-
-
-
-
-
+    Component.onDestruction: Plugin.deletePlugin()
 }

@@ -15,6 +15,7 @@ using namespace std;
 DataModelBase::DataModelBase(QObject *parent) : QObject(parent) {
   _timer = new QTimer(this);
   _timerInterval = Utils::getTimeIntervalSetting();
+  _transformerName = "defaultReturnTransformer";
 }
 
 DataModelBase::DataModelBase(QObject *parent, QString transformerName)

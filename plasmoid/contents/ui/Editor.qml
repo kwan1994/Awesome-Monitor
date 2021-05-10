@@ -84,24 +84,24 @@ Qt2.ApplicationWindow {
                 spacing:10
                 Button{
 
-            text: "Cancel"
-            onClicked: {
-                addDataModelDialog.close()
-            }
-            anchors.rightMargin: 10
-        }
+                    text: "Cancel"
+                    onClicked: {
+                        addDataModelDialog.close()
+                    }
+                    anchors.rightMargin: 10
+                }
 
-        Button{
-            enabled: addDataModelDialog.name != undefined
-            text: "Add"
-            onClicked: {
-                let compListItem = list.model.data(list.model.index(list.currentIndex,0));
-                treeModel.insertRow(0,tree.currentIndex,compListItem.schemaPath,addDataModelDialog.name);
-                Plugin.deletePlugin();
-                Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
-                addDataModelDialog.close()
-            }
-        }}]
+                Button{
+                    enabled: addDataModelDialog.name != undefined
+                    text: "Add"
+                    onClicked: {
+                        let compListItem = list.model.data(list.model.index(list.currentIndex,0));
+                        treeModel.insertRow(0,tree.currentIndex,compListItem.schemaPath,addDataModelDialog.name);
+                        Plugin.deletePlugin();
+                        Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
+                        addDataModelDialog.close()
+                    }
+                }}]
 
         location: Types.Floating
 
@@ -125,12 +125,12 @@ Qt2.ApplicationWindow {
         z:200
         visible: closeDialog.status === Plasma2.DialogStatus.Open  || addDataModelDialog.status === Plasma2.DialogStatus.Open
         anchors.fill: parent
-            color: "#aacfdbe7"
-            MouseArea {
-                hoverEnabled: true
-                enabled: true
-                anchors.fill: parent
-            }
+        color: "#aacfdbe7"
+        MouseArea {
+            hoverEnabled: true
+            enabled: true
+            anchors.fill: parent
+        }
     }
 
     Plasma2.Dialog {
@@ -145,52 +145,52 @@ Qt2.ApplicationWindow {
                 spacing:10
                 Button{
 
-            text: "Exit without save"
-            onClicked: {
-                //window.shouldClose = true;
-                //refresher.running = false;
+                    text: "Exit without save"
+                    onClicked: {
+                        //window.shouldClose = true;
+                        //refresher.running = false;
 
-                Plugin.deletePlugin();
-                closeDialog.close();
-                isChanged = false;
-                window.hide()
-            }
-            anchors.rightMargin: 10
-        }
+                        Plugin.deletePlugin();
+                        closeDialog.close();
+                        isChanged = false;
+                        window.hide()
+                    }
+                    anchors.rightMargin: 10
+                }
 
-        Button{
+                Button{
 
-            anchors.rightMargin: 10
-            text: "Save and Exit"
-            onClicked: {
-                window.shouldClose = true;
-                //refresher.running = false;
-                save()
-                isChanged = false;
-                Plugin.deletePlugin();
-                closeDialog.close()
-                window.hide();
-            }
-        }
+                    anchors.rightMargin: 10
+                    text: "Save and Exit"
+                    onClicked: {
+                        window.shouldClose = true;
+                        //refresher.running = false;
+                        save()
+                        isChanged = false;
+                        Plugin.deletePlugin();
+                        closeDialog.close()
+                        window.hide();
+                    }
+                }
 
 
 
-        Button{
-            Qt2.DialogButtonBox.buttonRole: DialogButtonBox.RejectRole
-            anchors.rightMargin: 10
-            text: "Cancel"
-            onClicked: {
-                closeDialog.close();
-                isChanged = false;}
-        }}]
+                Button{
+                    Qt2.DialogButtonBox.buttonRole: DialogButtonBox.RejectRole
+                    anchors.rightMargin: 10
+                    text: "Cancel"
+                    onClicked: {
+                        closeDialog.close();
+                        isChanged = false;}
+                }}]
 
         location: Types.Floating
 
 
         content:              Text {
-                color: Theme.textColor
-                text: "There are unsaved changes are you sure you want to exit without saving"
-            }
+            color: Theme.textColor
+            text: "There are unsaved changes are you sure you want to exit without saving"
+        }
 
 
     }
@@ -371,11 +371,11 @@ Qt2.ApplicationWindow {
                         property var hoveredIndex: value
 
                         highlight: Plasma2.Highlight {
-    clip: true
-    //anchors.fill: parent
-    //hover: listItemArea.containsMouse
+                            clip: true
+                            //anchors.fill: parent
+                            //hover: listItemArea.containsMouse
 
-}
+                        }
 
 
                         //highlightFollowsCurrentItem: true
@@ -420,15 +420,15 @@ Qt2.ApplicationWindow {
                             }}
 
 
-                                section.delegate:Rectangle{
-                                height: 30
-                                MouseArea {
-                                    anchors.fill: parent
-                                    id:area
-                                    enabled: true
-                                    hoverEnabled: true
-                                }
-                                RowLayout{
+                        section.delegate:Rectangle{
+                            height: 30
+                            MouseArea {
+                                anchors.fill: parent
+                                id:area
+                                enabled: true
+                                hoverEnabled: true
+                            }
+                            RowLayout{
                                 anchors.top: parent.top
                                 anchors.bottom: parent.bottom
                                 width: list.width
@@ -600,7 +600,7 @@ Qt2.ApplicationWindow {
                     implicitWidth: minus.width
                     id:slider
                     valueIndicatorText: (slider.value * 100).toString() + "%"
-                     value: 1
+                    value: 1
                     minimumValue :0.1
                     maximumValue:2
                     stepSize: .01
@@ -645,39 +645,39 @@ Qt2.ApplicationWindow {
 
 
 
-                        Plasma2.ScrollBar {
-                            anchors.left: parent.left
-z:20
-                            //    id:p
-                            orientation: Qt.Horizontal
-                            visible: grid.contentWidth > parent.width
+            Plasma2.ScrollBar {
+                anchors.left: parent.left
+                z:20
+                //    id:p
+                orientation: Qt.Horizontal
+                visible: grid.contentWidth > parent.width
 
-                            flickableItem: grid
-                            interactive: true
-                            stepSize: 10
-                            scrollButtonInterval: 10
-                            anchors.leftMargin: 10
-                            anchors.rightMargin: 5
-                            anchors.topMargin: 5
-                            anchors.bottomMargin: 5
-                            anchors.bottom: parent.bottom
-                            anchors.right: parent.right
+                flickableItem: grid
+                interactive: true
+                stepSize: 10
+                scrollButtonInterval: 10
+                anchors.leftMargin: 10
+                anchors.rightMargin: 5
+                anchors.topMargin: 5
+                anchors.bottomMargin: 5
+                anchors.bottom: parent.bottom
+                anchors.right: parent.right
 
-                        }
+            }
 
 
-                        Plasma2.ScrollBar {
-                            z: 20
-                            id:p
-                            orientation: Qt.Vertical
-                            visible: grid.contentHeight > parent.height
+            Plasma2.ScrollBar {
+                z: 20
+                id:p
+                orientation: Qt.Vertical
+                visible: grid.contentHeight > parent.height
 
-                            flickableItem: grid
-                            interactive: true
-                            stepSize: 10
-                            scrollButtonInterval: 10
+                flickableItem: grid
+                interactive: true
+                stepSize: 10
+                scrollButtonInterval: 10
 
-                        }
+            }
 
 
             Flickable {
@@ -790,6 +790,9 @@ z:20
             id: web
             url:"../code/jsonForm/build/index.html"
             webChannel.registeredObjects: [someObject]
+            onContextMenuRequested: {
+                request.accepted = true
+            }
         }
 
 

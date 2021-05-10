@@ -1,1 +1,22 @@
-{"type": "object"}
+{
+    "type": "object",
+    "properties":{
+    "_":{
+         "enum":[
+            "CommandLineDataModel"
+         ]
+    },
+    "transformFunc":{
+        "type":"object",
+        "properties":{
+            "type":{"enum":["function"]},
+            "value":{"type":"string"}
+        },
+        "required":["type","value"]
+    },
+    "timerInterval":{"type":"number"},
+    "command":{"type":"string"}
+    },
+    "required":["_"]
+
+}

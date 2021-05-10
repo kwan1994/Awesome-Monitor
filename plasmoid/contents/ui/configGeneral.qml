@@ -16,8 +16,6 @@ Item {
     //property Component editor: Qt.createComponent("Editor.qml")
     property int textFieldWidth: 500
     property var changed: false
-    width: childrenRect.width
-    height: childrenRect.height
 
 
     function urlToPath(urlString) {
@@ -89,6 +87,7 @@ Item {
 
     Kirigami.FormLayout {
         anchors.fill: parent
+        width: 550
         SpinBox {
             value: Number(settings.value("timerInterval","1000"))
             Qt2.ToolTip.delay: 500

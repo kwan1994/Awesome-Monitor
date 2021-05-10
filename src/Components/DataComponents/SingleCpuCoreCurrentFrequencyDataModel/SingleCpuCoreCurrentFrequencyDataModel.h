@@ -6,6 +6,7 @@
 #define AWESOMEMONITOR_SINGLECPUCORECURRENTFREQUENCYDATAMODEL_H
 
 #include <QtCore/qstring.h>
+
 #include "../DataModelBase.h"
 
 class SingleCpuCoreCurrentFrequencyDataModel : public DataModelBase {
@@ -13,22 +14,19 @@ class SingleCpuCoreCurrentFrequencyDataModel : public DataModelBase {
   QString _acpiId;
   QString sensorPath;
 
-
-  Q_PROPERTY(QString acpiId READ acpiId WRITE setAcpiId
-                 NOTIFY acpiIdChanged FINAL);
+  Q_PROPERTY(QString acpiId READ acpiId WRITE setAcpiId NOTIFY acpiIdChanged FINAL);
 
  public:
-  QString acpiId(){
-    return _acpiId;
-  }
+  QString acpiId() { return _acpiId; }
 
-  void setAcpiId(QString id){
+  void setAcpiId(QString id) {
     _acpiId = id;
     Initialize();
   }
 
  signals:
   void acpiIdChanged();
+
  public:
   SingleCpuCoreCurrentFrequencyDataModel(QObject* parent = nullptr);
   SingleCpuCoreCurrentFrequencyDataModel(QString acpiId,

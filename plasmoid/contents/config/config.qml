@@ -10,9 +10,5 @@ icon: "generalSettingsIcon"
          source: "configGeneral.qml"
     }
 
-    ConfigCategory {
-        icon: "customer-support"
-         name: i18nc("@title", "Custom")
-         source: "configCustom.qml"
-    }
+
 }

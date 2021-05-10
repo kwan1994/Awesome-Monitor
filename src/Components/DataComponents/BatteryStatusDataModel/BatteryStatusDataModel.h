@@ -8,6 +8,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QString>
 #include <QtCore/QStringList>
+
 #include "../DataModelBase.h"
 class BatteryStatusDataModel : public DataModelBase {
   Q_OBJECT
@@ -20,20 +21,12 @@ class BatteryStatusDataModel : public DataModelBase {
   void computeValue();
 
  public:
-  enum State { Charging, Discharging, Full, Trickling };
   QString batteryName();
   void setBatteryName(QString name);
   BatteryStatusDataModel(QObject* parent = nullptr);
 
  signals:
   void batteryNameChanged();
-
- private:
-  QMap<QString, State> values =
-      QMap<QString, State>{{"Charging", State::Charging},
-                           {"Full", State::Full},
-                           {"Discharging", State::Discharging},
-                           {"Trickling", State::Trickling}};
 };
 
 #endif  // AWESOMEMONITOR_BATTERYSTATUSDATAMODEL_H

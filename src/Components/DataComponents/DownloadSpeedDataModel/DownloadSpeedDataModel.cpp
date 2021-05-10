@@ -3,6 +3,7 @@
 //
 
 #include "DownloadSpeedDataModel.h"
+
 #include <QDirIterator>
 #include <QtCore/QDir>
 DownloadSpeedDataModel::DownloadSpeedDataModel(QObject *parent)
@@ -42,10 +43,10 @@ void DownloadSpeedDataModel::computeValue() {
   for (auto path : interfaceTraficPaths) {
     QFile file(path);
     if (file.open(QFile::ReadOnly)) {
-      current += QString(file.readAll()).toInt();
+      current += QString(file.readAll()).toLongLong();
     }
   }
-  auto transfered = (current - previous) / (_timerInterval / 1000);
+  auto transfered = current - previous;
   previous = current;
   setCurrentValue(transfered, true);
 }

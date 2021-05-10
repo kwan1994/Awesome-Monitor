@@ -3,6 +3,7 @@
 //
 
 #include "BatteryCapacityDataModel.h"
+
 #include <QtCore/QDirIterator>
 #include <iostream>
 

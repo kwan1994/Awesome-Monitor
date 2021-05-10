@@ -1,1 +1,22 @@
-{"type": "object"}
+{
+    "type": "object",
+    "properties":{
+    "_":{
+         "enum":[
+            "SingleCpuCoreCurrentFrequencyDataModel"
+         ]
+    },
+    "transformFunc":{
+        "type":"object",
+        "properties":{
+            "type":{"enum":["function"]},
+            "value":{"type":"string"}
+        },
+        "required":["type","value"]
+    },
+    "timerInterval":{"type":"number"},
+    "acpiId":{"type":"string"}
+    },
+    "required":["_"]
+
+}
