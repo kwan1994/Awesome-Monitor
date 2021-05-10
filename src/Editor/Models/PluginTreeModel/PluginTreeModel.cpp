@@ -317,6 +317,9 @@ PluginTreeModel::PluginTreeModel() {
 bool PluginTreeModel::insertRow(int row, const QModelIndex &parent,
                                 QString schemaPath) {
   auto pItem = getItem(parent);
+  qDebug() << pItem;
+  qDebug() << schemaPath;
+  qDebug() << row;
   if (!pItem) return false;
   QFile file(schemaPath);
   if (!file.open(QFile::ReadOnly)) {

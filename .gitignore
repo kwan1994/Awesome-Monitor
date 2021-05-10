@@ -50,5 +50,9 @@ prefix.sh
 *CpuMaxFrequencyDataModel*
 *CpuTemperatureDataModel*
 *CpuUtilisationDataModel*
+_deps
+json-binary-dir
+json
+data
 
 

@@ -282,7 +282,8 @@ Qt2.ApplicationWindow {
                             }
                             signal schemaChange(var schema, var forData)
                             onClicked: {
-                                if(list.currentIndex && tree.currentIndex){
+
+                                if(list.currentIndex !== undefined && tree.currentIndex){
                                     console.log(list.currentIndex)
                                     var listItem = list.model.data(list.model.index(list.currentIndex,0,undefined));
                                     if(listItem.isDataModel()){

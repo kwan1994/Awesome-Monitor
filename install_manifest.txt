@@ -69,9 +69,6 @@
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMinFrequencyDataModel/SingleCpuCoreMinFrequencyDataModel.svg
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMinFrequencyDataModel/SingleCpuCoreMinFrequencyDataModel.jsonSchema
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMinFrequencyDataModel/SingleCpuCoreMinFrequencyDataModel.qml
-/home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreTemperatureDataModel/SingleCpuCoreTemperatureDataModel.jsonSchema
-/home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreTemperatureDataModel/SingleCpuCoreTemperatureDataModel.qml
-/home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreTemperatureDataModel/SingleCpuCoreTemperatureDataModel.svg
 /home/kwan/.config/AwesomeMonitor/DataModels/AvailableSwapSpaceDataModel/AvailableSwapSpaceDataModel.svg
 /home/kwan/.config/AwesomeMonitor/DataModels/AvailableSwapSpaceDataModel/AvailableSwapSpaceDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/AvailableSwapSpaceDataModel/AvailableSwapSpaceDataModel.jsonSchema
@@ -90,9 +87,6 @@
 /home/kwan/.config/AwesomeMonitor/DataModels/CommandLineDataModel/CommandLineDataModel.svg
 /home/kwan/.config/AwesomeMonitor/DataModels/CommandLineDataModel/CommandLineDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/CommandLineDataModel/CommandLineDataModel.jsonSchema
-/home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMaxTemperatureDataModel/SingleCpuCoreMaxTemperatureDataModel.qml
-/home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMaxTemperatureDataModel/SingleCpuCoreMaxTemperatureDataModel.jsonSchema
-/home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreMaxTemperatureDataModel/SingleCpuCoreMaxTemperatureDataModel.svg
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreCurrentFrequencyDataModel/SingleCpuCoreCurrentFrequencyDataModel.jsonSchema
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreCurrentFrequencyDataModel/SingleCpuCoreCurrentFrequencyDataModel.svg
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreCurrentFrequencyDataModel/SingleCpuCoreCurrentFrequencyDataModel.qml
