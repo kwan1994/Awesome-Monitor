@@ -5,7 +5,7 @@
 #include <QQmlComponent>
 
 #include "QQmlEngine"
-#include "src/Components/DataComponents/FreeMemoryDataModel/FreeMemoryDataModel.h"
+#include "src/Components/DataComponents/DownloadSpeedDataModel/DownloadSpeedDataModel.h"
 using namespace std;
 
 int main(int argc, char **args) {
@@ -28,13 +28,14 @@ int main(int argc, char **args) {
 
   QQmlComponent c(new QQmlEngine,
                   "/home/kwan/0CC4-8589/AwesomeMonitor/defaultConfig/"
-                  "DataModels/FreeMemoryDataModel/"
-                  "FreeMemoryDataModel.qml");
+                  "DataModels/DownloadSpeedDataModel/"
+                  "DownloadSpeedDataModel.qml");
 
   qDebug() << c.errorString();
 
-  auto dataModel = qobject_cast<FreeMemoryDataModel *>(c.create());
-  QObject::connect(dataModel, &FreeMemoryDataModel::currentValueChanged,
+  auto dataModel = qobject_cast<DownloadSpeedDataModel *>(c.create());
+  dataModel->setInterfaceName("wlp1s0");
+  QObject::connect(dataModel, &DownloadSpeedDataModel::currentValueChanged,
                    [](QVariant value) -> void { qDebug() << value; });
 
   return application.exec();

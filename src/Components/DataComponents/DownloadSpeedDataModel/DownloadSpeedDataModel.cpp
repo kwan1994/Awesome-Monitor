@@ -4,6 +4,7 @@
 
 #include "DownloadSpeedDataModel.h"
 
+#include <QDebug>
 #include <QDirIterator>
 #include <QtCore/QDir>
 DownloadSpeedDataModel::DownloadSpeedDataModel(QObject *parent)
@@ -42,6 +43,7 @@ void DownloadSpeedDataModel::computeValue() {
   long long current = 0;
   for (auto path : interfaceTraficPaths) {
     QFile file(path);
+    qDebug() << current;
     if (file.open(QFile::ReadOnly)) {
       current += QString(file.readAll()).toLongLong();
     }

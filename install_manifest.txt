@@ -91,6 +91,7 @@
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreCurrentFrequencyDataModel/SingleCpuCoreCurrentFrequencyDataModel.svg
 /home/kwan/.config/AwesomeMonitor/DataModels/SingleCpuCoreCurrentFrequencyDataModel/SingleCpuCoreCurrentFrequencyDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/UploadSpeedDataModel/UploadSpeedDataModel.svg
+/home/kwan/.config/AwesomeMonitor/DataModels/UploadSpeedDataModel/UploadSpeedDataModel.jsonSchema
 /home/kwan/.config/AwesomeMonitor/DataModels/UploadSpeedDataModel/UploadSpeedDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/FreeSwapSpaceDataModel/FreeSwapSpaceDataModel.qml
 /home/kwan/.config/AwesomeMonitor/DataModels/FreeSwapSpaceDataModel/FreeSwapSpaceDataModel.svg

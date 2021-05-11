@@ -31,14 +31,12 @@ void UploadSpeedDataModel::initialize() {
 void UploadSpeedDataModel::computeValue() {
   long long current = 0;
   for (auto path : interfaceTraficPaths) {
-    qDebug() << "neco";
     QFile file(path);
     if (file.open(QFile::ReadOnly)) {
       current += QString(file.readAll()).toLongLong();
     }
   }
-  auto transfered = (current - previous) / (_timerInterval / 1000);
+  auto transfered = (current - previous);
   previous = current;
-  qDebug() << transfered;
   setCurrentValue(transfered, true);
 }

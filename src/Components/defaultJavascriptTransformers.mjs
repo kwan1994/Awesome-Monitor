@@ -16,6 +16,6 @@ export function defaultReturnTransformer(value){
     return value;
 }
 
-export function defautlSpeedTransformer(value) {
-    return value/1000;
+export function defaultSpeedTransformer(value) {
+    return value;
 }
