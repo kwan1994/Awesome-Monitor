@@ -156,7 +156,6 @@ nlohmann::json JsonToTreeParser::generateSchema(
     }
   }
 
-  cout << schemas.dump(4) << endl;
   return schemas;
 }
 
@@ -243,29 +242,10 @@ QSharedPointer<QObject> JsonToTreeParser::initializeComponet(
     if (!qmlProperty.write(value))
       qWarning() << "Property with name " << entry.key().c_str()
                  << "wasnt writen into object of type" << objectType;
-    qDebug() << value << " " << qmlProperty.read() << qmlProperty.name();
   }
 
   parent->me = component;
   return QSharedPointer<QObject>(widget);
-}
-
-boost::filesystem::path expand(boost::filesystem::path in) {
-  if (in.size() < 1) return in;
-
-  const char *home = getenv("HOME");
-  if (home == NULL) {
-    cerr << "error: HOME variable not set." << endl;
-    throw std::invalid_argument("error: HOME environment variable not set.");
-  }
-
-  string s = in.c_str();
-  if (s[0] == '~') {
-    s = string(home) + s.substr(1, s.size() - 1);
-    return boost::filesystem::path(s);
-  } else {
-    return in;
-  }
 }
 
 QMap<QString, QString> JsonToTreeParser::createFileMap(QString path,
@@ -378,7 +358,6 @@ void JsonToTreeParser::addDataModelsToComponent(QObject *pObject,
       if (!qmlProperty.write(value))
         qWarning() << "Property with name " << entry.key().c_str()
                    << "wasnt writen into object of type" << objectType;
-      qDebug() << value << " " << qmlProperty.read();
     }
 
     dataModels.insert(entry.key().c_str(), QVariant::fromValue(widget));
@@ -393,7 +372,6 @@ void JsonToTreeParser::addDataModelsToComponent(QObject *pObject,
 Model *JsonToTreeParser::createErrorModel(QString error) {
   auto model = new Model;
   QQmlComponent component(engine, errorComponentpath);
-  qDebug() << component.errorString();
   auto s = component.create(engine->rootContext());
   qobject_cast<QWindow *>(s)->setProperty("error", error);
   auto node = QSharedPointer<Node>(new Node(engine->rootContext()));

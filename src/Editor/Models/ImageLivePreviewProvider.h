@@ -32,7 +32,6 @@ class ImageProvider : public QQuickImageProvider {
     auto number = id.toInt();
     if (!initializing && number >= 0 && m_windows.count() > number &&
         m_windows[number]) {
-      qDebug() << "window";
       auto window = m_windows[number];
       auto image = window->grabWindow();
       return image;

@@ -24,16 +24,6 @@
 
 using namespace std;
 
-class custom_error_handler : public nlohmann::json_schema::basic_error_handler {
-  void error(const nlohmann::json_pointer<nlohmann::basic_json<>> &pointer,
-             const nlohmann::json &instance,
-             const std::string &message) override {
-    nlohmann::json_schema::basic_error_handler::error(pointer, instance,
-                                                      message);
-    std::cout << "ERROR: '" << pointer << "' - '" << instance
-              << "': " << message << "\n";
-  }
-};
 
 class JsonToTreeParser {
  public:

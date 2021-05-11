@@ -46,13 +46,13 @@ void DataModelBase::restartTimer() { _timer->start(_timerInterval); }
 
 void DataModelBase::setCurrentValue(QVariant currentValue, bool transform) {
   if (transform) {
-    auto engine = QQmlEngine::contextForObject(this);
-    if (engine && (_transformerName != "" || _transformFunc.isCallable())) {
-      auto nec = engine->engine();
+    auto context = QQmlEngine::contextForObject(this);
+    if (context && (_transformerName != "" || _transformFunc.isCallable())) {
+      auto engine = context->engine();
       if (!_transformFunc.isCallable()) {
-        setTransformFunc(Utils::getTransformer(_transformerName, nec));
+        setTransformFunc(Utils::getTransformer(_transformerName, engine));
       }
-      auto s = transformFunc().call({nec->toScriptValue(currentValue)});
+      auto s = transformFunc().call({engine->toScriptValue(currentValue)});
       setCurrentValue(s.toVariant());
     }
     return;

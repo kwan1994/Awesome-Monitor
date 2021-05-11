@@ -17,5 +17,4 @@
     "timerInterval":{"type":"number"}
     },
     "required":["_"]
-
 }
