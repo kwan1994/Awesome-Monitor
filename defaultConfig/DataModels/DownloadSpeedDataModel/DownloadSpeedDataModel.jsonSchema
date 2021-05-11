@@ -15,7 +15,7 @@
       "required":["type","value"]
     },
     "timerInterval":{"type":"number"},
-    "interfaceName": {"type": "string"},
+    "interfaceName": {"type": "string"}
 
   },
   "required":["_","interfaceName"]

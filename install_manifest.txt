@@ -55,6 +55,13 @@
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/static/js/2.203305ea.chunk.js.map
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/static/js/2.203305ea.chunk.js.LICENSE.txt
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/static/js/runtime-main.22fdafc7.js
+/usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/logo192.png
+/usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/manifest.json
+/usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/index.html
+/usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/robots.txt
+/usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/favicon.ico
+/usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/asset-manifest.json
+/usr/share/plasma/plasmoids/AwesomeMonitor/contents/code/jsonForm/build/logo512.png
 /usr/share/kservices5/plasma-applet-AwesomeMonitor.desktop
 /usr/lib/qt/qml/AwesomeMonitor/libAwesomeMonitor.so
 /usr/lib/qt/qml/AwesomeMonitor/qmldir
@@ -129,6 +136,7 @@
 /home/kwan/.config/AwesomeMonitor/BaseComponents/Window/Window.svg
 /home/kwan/.config/AwesomeMonitor/BaseComponents/Window/Window.jsonSchema
 /home/kwan/.config/AwesomeMonitor/BaseComponents/Window/Window.qml
+/home/kwan/.config/AwesomeMonitor/Model3.json
 /home/kwan/.config/defaultJavascriptTransformers.mjs
 /usr/lib/qt/qml/AwesomeComponents/libawesomeComponentsPlugin.so
 /usr/lib/qt/qml/AwesomeComponents/qmldir

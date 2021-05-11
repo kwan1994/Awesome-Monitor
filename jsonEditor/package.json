@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "BROWSER='google-chrome-stable' react-scripts start",
-    "build": "react-scripts build && rm -rf ../plasmoid/contents/code/jsonForm && mkdir -p ../plasmoid/contents/code/jsonForm && mv build ../plasmoid/contents/code/jsonForm",
+    "build": "react-scripts build && sudo rm -rf ../plasmoid/contents/code/jsonForm && sudo mkdir -p ../plasmoid/contents/code/jsonForm && sudo mv build ../plasmoid/contents/code/jsonForm",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -18,6 +18,8 @@ add_custom_command(
         $<TARGET_FILE_DIR:AwesomeMonitor>/qmldir
 )
 
+add_custom_command(TARGET AwesomeMonitor POST_BUILD WORKING_DIRECTORY ../jsonEditor COMMAND npm run-script build)
+
 set(URI AwesomeMonitor)
 string(REPLACE "." "/" TARGETPATH ${URI})
 execute_process(COMMAND qmake -query QT_INSTALL_QML OUTPUT_VARIABLE QT_INSTALL_QML_RAW)
