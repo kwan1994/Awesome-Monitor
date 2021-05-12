@@ -1,1 +1,266 @@
-{"windows":[]}
+{
+  "windows": [
+    {
+      "_": "Window",
+      "background": {
+        "_": "Rectangle",
+        "color": "darkblue",
+        "type": "item"
+      },
+      "childern": [
+        {
+          "_": "Column",
+          "anchors.fill": {
+            "type": "bind",
+            "value": "return parent"
+          },
+          "childern": [
+            {
+              "_": "Row",
+              "childern": [
+                {
+                  "_": "Text",
+                  "anchors.bottom": {
+                    "type": "bind",
+                    "value": "return parent.bottom"
+                  },
+                  "childern": [
+                  ],
+                  "color": "orange",
+                  "text": "Info"
+                },
+                {
+                  "_": "Rectangle",
+                  "anchors.bottom": {
+                    "type": "bind",
+                    "value": "return parent.bottom"
+                  },
+                  "childern": [
+                  ],
+                  "color": "lightgray",
+                  "height": 2,
+                  "width": 235
+                }
+              ]
+            },
+            {
+              "_": "Row",
+              "childern": [
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightblue",
+                  "text": "Date"
+                },
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightgray",
+                  "dataModels": {
+                    "valueModel": {
+                      "_": "CommandLineDataModel",
+                      "command": "date +\"%a, %d %B %Y\"",
+                      "timerInterval": 1000,
+                      "transformFunc": {
+                        "type": "function",
+                        "value": "(value) => value.toString().trim()"
+                      }
+                    }
+                  }
+                }
+              ],
+              "spacing": 110
+            },
+            {
+              "_": "Row",
+              "childern": [
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightblue",
+                  "text": "Time"
+                },
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightgray",
+                  "dataModels": {
+                    "valueModel": {
+                      "_": "CommandLineDataModel",
+                      "command": "date +\"%H:%M:%S\"",
+                      "timerInterval": 1000,
+                      "transformFunc": {
+                        "type": "function",
+                        "value": "(value) => value.toString().trim()"
+                      }
+                    }
+                  }
+                }
+              ],
+              "spacing": 173
+            },
+            {
+              "_": "Row",
+              "childern": [
+                {
+                  "_": "Text",
+                  "anchors.bottom": {
+                    "type": "bind",
+                    "value": "return parent.bottom"
+                  },
+                  "childern": [
+                  ],
+                  "color": "orange",
+                  "text": "System"
+                },
+                {
+                  "_": "Rectangle",
+                  "anchors.bottom": {
+                    "type": "bind",
+                    "value": "return parent.bottom"
+                  },
+                  "childern": [
+                  ],
+                  "color": "lightgray",
+                  "height": 2,
+                  "width": 215
+                }
+              ]
+            },
+            {
+              "_": "Row",
+              "childern": [
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightblue",
+                  "text": "Hostname"
+                },
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightgray",
+                  "dataModels": {
+                    "valueModel": {
+                      "_": "CommandLineDataModel",
+                      "command": "hostname",
+                      "timerInterval": 1000,
+                      "transformFunc": {
+                        "type": "function",
+                        "value": "(value) => value.toString().trim()"
+                      }
+                    }
+                  }
+                }
+              ],
+              "spacing": 143
+            },
+            {
+              "_": "Row",
+              "childern": [
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightblue",
+                  "text": "Linux"
+                },
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightgray",
+                  "dataModels": {
+                    "valueModel": {
+                      "_": "CommandLineDataModel",
+                      "command": "head -1 /etc/manjaro-release",
+                      "timerInterval": 1000,
+                      "transformFunc": {
+                        "type": "function",
+                        "value": "(value) => value.toString().trim()"
+                      }
+                    }
+                  }
+                }
+              ],
+              "spacing": 137
+            },
+            {
+              "_": "Row",
+              "childern": [
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightblue",
+                  "text": "Uptime"
+                },
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightgray",
+                  "dataModels": {
+                    "valueModel": {
+                      "_": "CommandLineDataModel",
+                      "command": "awk '{print int($1/3600)\"h \" int(($1%3600)/60)\"m  \"int($1%60)\"s \"}' /proc/uptime",
+                      "name": "asdasd",
+                      "timerInterval": 1000,
+                      "transformFunc": {
+                        "type": "function",
+                        "value": "(value) => {return  value.toString().trim()}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "spacing": 140
+            },
+            {
+              "_": "Row",
+              "childern": [
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightblue",
+                  "text": "CPU"
+                },
+                {
+                  "_": "Text",
+                  "childern": [
+                  ],
+                  "color": "lightgray",
+                  "dataModels": {
+                    "valueModel": {
+                      "_": "SingleCpuCoreUtilisationDataModel",
+                      "acpiId": "4",
+                      "name": "asdasd",
+                      "timerInterval": 1000,
+                      "transformFunc": {
+                        "type": "function",
+                        "value": "(value) => {;return  (Number.isNaN(value)?0:Math.trunc(value * 100)).toString() + \"%\" }"
+                      }
+                    }
+                  }
+                }
+              ],
+              "spacing": 210
+            }
+          ]
+        }
+      ],
+      "height": 150,
+      "width": 260,
+      "x":20,
+      "y":20,
+      "visible": true
+    }
+  ]
+}

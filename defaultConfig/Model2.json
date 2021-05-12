@@ -70,13 +70,13 @@
                             "color": "transparent",
                             "dataModels": {
                                 "valueModel": {
-                                    "_": "SingleCpuCoreTemperatureDataModel",
-                                    "acpiId": "1",
+                                    "_": "CommandLineDataModel",
+                                    "command": "cat /sys/class/hwmon/hwmon3/temp2_input",
                                     "name": "asdasd",
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
-                                        "value": "(value) => { return Math.trunc(Number(value)/1000).toString() + \" °C\" }"
+                                        "value": "(value) => {value = Number(value.toString().trim()); return Math.trunc(value/1000).toString() + \" °C\" }"
                                     }
                                 }
                             },
@@ -108,17 +108,17 @@
                             ],
                             "color": "transparent",
                             "dataModels": {
-                                "valueModel": {
-                                    "_": "SingleCpuCoreTemperatureDataModel",
-                                    "acpiId": "2",
-                                    "name": "asdasd",
-                                    "timerInterval": 1000,
-                                    "transformFunc": {
-                                        "type": "function",
-                                        "value": "(value) => {return Math.trunc(Number(value)/1000).toString() + \" °C\" }"
-                                    }
+                            "valueModel": {
+                                "_": "CommandLineDataModel",
+                                "command": "cat /sys/class/hwmon/hwmon3/temp2_input",
+                                "name": "asdasd",
+                                "timerInterval": 1000,
+                                "transformFunc": {
+                                    "type": "function",
+                                    "value": "(value) => {value = Number(value.toString().trim()); return Math.trunc(value/1000).toString() + \" °C\" }"
                                 }
-                            },
+                            }
+                        },
                             "height": 10,
                             "name": "adsdas",
                             "spacing": 240
@@ -148,13 +148,13 @@
                             "color": "transparent",
                             "dataModels": {
                                 "valueModel": {
-                                    "_": "SingleCpuCoreTemperatureDataModel",
-                                    "acpiId": "3",
+                                    "_": "CommandLineDataModel",
+                                    "command": "cat /sys/class/hwmon/hwmon3/temp2_input",
                                     "name": "asdasd",
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
-                                        "value": "(value) => {return Math.trunc(Number(value)/1000).toString() + \" °C\" }"
+                                        "value": "(value) => {value = Number(value.toString().trim()); return Math.trunc(value/1000).toString() + \" °C\" }"
                                     }
                                 }
                             },
@@ -187,13 +187,13 @@
                             "color": "transparent",
                             "dataModels": {
                                 "valueModel": {
-                                    "_": "SingleCpuCoreTemperatureDataModel",
-                                    "acpiId": "4",
+                                    "_": "CommandLineDataModel",
+                                    "command": "cat /sys/class/hwmon/hwmon3/temp2_input",
                                     "name": "asdasd",
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
-                                        "value": "(value) => {return Math.trunc(Number(value)/1000).toString() + \" °C\" }"
+                                        "value": "(value) => {value = Number(value.toString().trim()); return Math.trunc(value/1000).toString() + \" °C\" }"
                                     }
                                 }
                             },
