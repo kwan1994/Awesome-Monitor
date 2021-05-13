@@ -21,6 +21,8 @@ Qt2.ApplicationWindow {
     visible: true
     property alias scale: slider.value
     property bool isChanged: false
+    minimumWidth: 1240
+    minimumHeight: 900
     
 
     menuBar: Qt2.MenuBar {
@@ -247,7 +249,7 @@ Qt2.ApplicationWindow {
                         anchors.centerIn: parent
                         Button{
                             id:del
-                            enabled: tree.currentIndex.valid
+                            enabled: selectionModel.currentIndex.valid
                             ColorScope.inherit: false
                             ColorScope.colorGroup: Theme.ButtonColorGroup
                             FallBackIcon {
@@ -261,9 +263,11 @@ Qt2.ApplicationWindow {
                             }
 
                             onClicked: {
-                                tree.model.removeRows(tree.currentIndex.row,1,tree.model.parent(tree.currentIndex));
+                                tree.model.removeRows(selectionModel.currentIndex.row,1,tree.model.parent(selectionModel.currentIndex));
+                                selectionModel.clearCurrentIndex();
                                 Plugin.deletePlugin();
                                 Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
+                                web.reload();
                                 isChanged = true;
                             }
 
@@ -275,22 +279,27 @@ Qt2.ApplicationWindow {
 
                             enabled: {
                                 let listIndex = list.currentIndex;
-                                let treeIndex = tree.currentIndex;
-                                //let listData = list.model.data(listIndex,0);
+                                let treeIndex = selectionModel.currentIndex;
+                                let listData;
+                                if(listIndex !== -1)
+                                 listData = list.model.data(list.model.index(listIndex,0));
                                 let treeData = tree.model.data(treeIndex,256);
-                                return listIndex !== -1 && (treeIndex !== -1)?!treeData.isDataModel():true;
+                                return listIndex !== -1 && (treeIndex.valid)?!treeData.isDataModel() && listData.name !== "Window":listData.name === "Window";
                             }
                             signal schemaChange(var schema, var forData)
                             onClicked: {
 
-                                if(list.currentIndex !== undefined && tree.currentIndex){
-                                    console.log(list.currentIndex)
+                                if(list.currentIndex !== undefined){
                                     var listItem = list.model.data(list.model.index(list.currentIndex,0,undefined));
                                     if(listItem.isDataModel()){
                                         addDataModelDialog.open();
                                         return;
                                     }
-                                    tree.model.insertRow(0,tree.currentIndex,listItem.schemaPath);
+                                    if(selectionModel.currentIndex.valid)
+                                        tree.model.insertRow(0,selectionModel.currentIndex,listItem.schemaPath);
+                                    else
+                                        tree.model.insertRow(0,tree.rootIndex,listItem.schemaPath);
+
                                     Plugin.deletePlugin();
                                     Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
                                     isChanged = true;
@@ -496,10 +505,21 @@ Qt2.ApplicationWindow {
                             width: s.width - 35
                         }
 
+                       selection: ItemSelectionModel {
+                        id: selectionModel
+                        model: treeModel
+
                         onCurrentIndexChanged: {
+                            if(currentIndex === tree.rootIndex){
+                                someObject.formDataChanged({},{});
+                            } else {
                             let item = treeModel.data(currentIndex,256);
                             someObject.formDataChanged(item.schemaForm,item.formData);
+                            }
                         }
+                       }
+
+
 
 
 
@@ -514,29 +534,42 @@ Qt2.ApplicationWindow {
 
 
 
-                                Plasma2.Highlight{
-                                    visible: styleData.selected || treeArea.containsMouse
-                                    anchors.fill: parent
-                                    width: tree.parent.width - 35
-                                    hover: treeArea.containsMouse
-                                    pressed: styleData.selected
 
-                                }
-
-                                MouseArea {
-                                    id: treeArea
-                                    onPressed: mouse.accepted = false
-                                    hoverEnabled: true
-                                    anchors.fill: parent
-                                }
                             }
 
-
+    
                             itemDelegate: Text {
+
                                 verticalAlignment: Text.AlignVCenter
                                 color: Theme.viewTextColor
                                 //id: name
                                 text: styleData.value
+
+
+                                Plasma2.Highlight{
+                                    opacity: 0.25
+                                    visible: {selectionModel.currentIndex; return selectionModel.isSelected(styleData.index) || treeArea.containsMouse;}
+                                    anchors.fill: parent
+
+
+                                    pressed: {selectionModel.currentIndex; return selectionModel.isSelected(styleData.index)}
+
+                                }
+                                MouseArea {
+                                    id: treeArea
+                                    onPressed: {
+                                        console.log(Theme.viewHighlightedTextColor,Theme.viewNegativeTextColor,Theme.viewNeutralTextColor,Theme.viewPositiveTextColor,Theme.viewTextColor);
+                                        console.log(selectionModel.isSelected(styleData.index),styleData.selected,"asdasdasdasda");
+                                        mouse.accepted = true;
+                                        let indexToSelect = selectionModel.isSelected(styleData.index)?tree.rootIndex:styleData.index;
+                                        selectionModel.setCurrentIndex(indexToSelect,ItemSelectionModel.ClearAndSelect);
+                                        //parent.seleted = selectionModel.isSelected(styleData.index)
+
+
+                                    }
+                                    hoverEnabled: true
+                                    anchors.fill: parent
+                                }
                             }
                         }
                     }
@@ -764,20 +797,20 @@ Qt2.ApplicationWindow {
             }
 
             function setFormData(formData) {
-                if(tree.currentIndex.valid){
-                    let item = treeModel.data(tree.currentIndex,256);
+                if(selectionModel.currentIndex.valid){
+                    let item = treeModel.data(selectionModel.currentIndex,256);
                     item.formData = formData;
                     Plugin.deletePlugin();
                     console.log(JSON.stringify(treeModel.getJsonModelRepresentation()));
                     Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
-                    web.reload();
                     isChanged = true;
+
                 }
             }
 
             function getTreeCurrentData() {
-                if(tree.currentIndex.valid){
-                    var item = tree.model.data(tree.currentIndex,0);
+                if(selectionModel.currentIndex.valid){
+                    var item = tree.model.data(selectionModel.currentIndex,0);
                     return {formData:item.formData,schemaForm:item.schemaForm}
                 }
                 return {formData:{},schemaForm:{}}
@@ -810,7 +843,9 @@ Qt2.ApplicationWindow {
     }
     Component.onCompleted: {Plugin.setHideWindows();Plugin.resetPlugin()}
     onClosing: {
-        close.accepted = false;
-        closeDialog.open();
+        if(isChanged) {
+            close.accepted = false;
+            closeDialog.open();
+        }
     }
 }
