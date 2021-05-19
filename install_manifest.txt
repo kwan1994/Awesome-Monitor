@@ -24,7 +24,6 @@
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/jsonForm/build/asset-manifest.json
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/jsonForm/build/logo512.png
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/configCustom.qml
-/usr/share/plasma/plasmoids/AwesomeMonitor/contents/ui/editor.qml
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/icons/expand-button.svg
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/icons/plasmoidIcon.png
 /usr/share/plasma/plasmoids/AwesomeMonitor/contents/icons/zoom-out.svg

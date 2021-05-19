@@ -803,6 +803,7 @@ Qt2.ApplicationWindow {
                     Plugin.deletePlugin();
                     console.log(JSON.stringify(treeModel.getJsonModelRepresentation()));
                     Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
+                    web.reload();
                     isChanged = true;
 
                 }

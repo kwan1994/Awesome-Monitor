@@ -5,14 +5,6 @@
             "childern": [
                 {
                     "_": "Column",
-                    "anchors.centerIn": {
-                        "type": "bind",
-                        "value": "return parent"
-                    },
-                    "anchors.horizontalCenter": {
-                        "type": "bind",
-                        "value": "return parent.horizontalCenter"
-                    },
                     "childern": [
                         {
                             "_": "Row",
