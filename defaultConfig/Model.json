@@ -210,7 +210,6 @@
                     "valueModel": {
                       "_": "CommandLineDataModel",
                       "command": "awk '{print int($1/3600)\"h \" int(($1%3600)/60)\"m  \"int($1%60)\"s \"}' /proc/uptime",
-                      "name": "asdasd",
                       "timerInterval": 1000,
                       "transformFunc": {
                         "type": "function",
@@ -241,7 +240,6 @@
                     "valueModel": {
                       "_": "SingleCpuCoreUtilisationDataModel",
                       "acpiId": "4",
-                      "name": "asdasd",
                       "timerInterval": 1000,
                       "transformFunc": {
                         "type": "function",

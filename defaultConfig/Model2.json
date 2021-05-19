@@ -25,7 +25,7 @@
                                         "type": "color",
                                         "value": "#fc8003"
                                     },
-                                    "name": "adsdas",
+                                    
                                     "text": "Temperatures"
                                 },
                                 {
@@ -38,11 +38,11 @@
                                         "value": "#b0aca9"
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "width": 215
                                 }
                             ],
-                            "name": "adsdas",
+                            
                             "spacing": 5
                         },
                         {
@@ -52,14 +52,14 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Core1"
                                 },
                                 {
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue"
@@ -72,7 +72,7 @@
                                 "valueModel": {
                                     "_": "CommandLineDataModel",
                                     "command": "cat /sys/class/hwmon/hwmon3/temp2_input",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -81,7 +81,7 @@
                                 }
                             },
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "spacing": 240
                         },
                         {
@@ -91,14 +91,14 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Core2"
                                 },
                                 {
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue"
@@ -111,7 +111,7 @@
                             "valueModel": {
                                 "_": "CommandLineDataModel",
                                 "command": "cat /sys/class/hwmon/hwmon3/temp2_input",
-                                "name": "asdasd",
+                                
                                 "timerInterval": 1000,
                                 "transformFunc": {
                                     "type": "function",
@@ -120,7 +120,7 @@
                             }
                         },
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "spacing": 240
                         },
                         {
@@ -130,14 +130,14 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Core3"
                                 },
                                 {
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue"
@@ -150,7 +150,7 @@
                                 "valueModel": {
                                     "_": "CommandLineDataModel",
                                     "command": "cat /sys/class/hwmon/hwmon3/temp2_input",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -159,7 +159,7 @@
                                 }
                             },
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "spacing": 240
                         },
                         {
@@ -169,14 +169,14 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Core4"
                                 },
                                 {
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue"
@@ -189,7 +189,7 @@
                                 "valueModel": {
                                     "_": "CommandLineDataModel",
                                     "command": "cat /sys/class/hwmon/hwmon3/temp2_input",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -198,7 +198,7 @@
                                 }
                             },
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "spacing": 240
                         },
                         {
@@ -212,7 +212,7 @@
                                         "type": "color",
                                         "value": "#fc8003"
                                     },
-                                    "name": "adsdas",
+                                    
                                     "text": "Memory"
                                 },
                                 {
@@ -225,11 +225,11 @@
                                         "value": "#b0aca9"
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "width": 248
                                 }
                             ],
-                            "name": "adsdas",
+                            
                             "spacing": 5
                         },
                         {
@@ -239,7 +239,7 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "MEM"
                                 },
                                 {
@@ -251,7 +251,7 @@
                                         "free": {
                                             "_": "CommandLineDataModel",
                                             "command": "awk '/MemAvailable/ {print $2}' /proc/meminfo",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -261,7 +261,7 @@
                                         "total": {
                                             "_": "CommandLineDataModel",
                                             "command": "awk '/MemTotal/ {print $2}' /proc/meminfo",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -270,7 +270,7 @@
                                         }
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return dataModels.free.currentValue+ \" GB\" + \" / \" + dataModels.total.currentValue+ \" GB\""
@@ -286,7 +286,7 @@
                                         "free": {
                                             "_": "CommandLineDataModel",
                                             "command": "awk '/MemAvailable/ {print $2}' /proc/meminfo",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -296,7 +296,7 @@
                                         "total": {
                                             "_": "CommandLineDataModel",
                                             "command": "awk '/MemTotal/ {print $2}' /proc/meminfo",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -305,7 +305,7 @@
                                         }
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "spacing": 50,
                                     "text": {
                                         "type": "bind",
@@ -314,7 +314,7 @@
                                     "width": 248
                                 }
                             ],
-                            "name": "adsdas",
+                            
                             "spacing": 65
                         },
                         {
@@ -326,7 +326,7 @@
                                 "free": {
                                     "_": "CommandLineDataModel",
                                     "command": "awk '/MemAvailable/ {print $2}' /proc/meminfo",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -336,7 +336,7 @@
                                 "total": {
                                     "_": "CommandLineDataModel",
                                     "command": "awk '/MemTotal/ {print $2}' /proc/meminfo",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -345,7 +345,7 @@
                                 }
                             },
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "to": 100,
                             "value": {
                                 "type": "bind",
@@ -360,7 +360,7 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "SWAP"
                                 },
                                 {
@@ -372,7 +372,7 @@
                                         "free": {
                                             "_": "CommandLineDataModel",
                                             "command": "awk '/SwapFree/ {print $2}' /proc/meminfo",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -382,7 +382,7 @@
                                         "total": {
                                             "_": "CommandLineDataModel",
                                             "command": "awk '/SwapTotal/ {print $2}' /proc/meminfo",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -391,7 +391,7 @@
                                         }
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return dataModels.free.currentValue+ \" GB\" + \" / \" + dataModels.total.currentValue+ \" GB\""
@@ -407,7 +407,7 @@
                                         "free": {
                                             "_": "CommandLineDataModel",
                                             "command": "awk '/SwapFree/ {print $2}' /proc/meminfo",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -417,7 +417,7 @@
                                         "total": {
                                             "_": "CommandLineDataModel",
                                             "command": "awk '/SwapTotal/ {print $2}' /proc/meminfo",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -426,7 +426,7 @@
                                         }
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "spacing": 50,
                                     "text": {
                                         "type": "bind",
@@ -435,7 +435,7 @@
                                     "width": 248
                                 }
                             ],
-                            "name": "adsdas",
+                            
                             "spacing": 63
                         },
                         {
@@ -447,7 +447,7 @@
                                 "free": {
                                     "_": "CommandLineDataModel",
                                     "command": "awk '/SwapFree/ {print $2}' /proc/meminfo",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -457,7 +457,7 @@
                                 "total": {
                                     "_": "CommandLineDataModel",
                                     "command": "awk '/SwapTotal/ {print $2}' /proc/meminfo",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -466,7 +466,7 @@
                                 }
                             },
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "to": 100,
                             "value": {
                                 "type": "bind",
@@ -485,7 +485,7 @@
                                         "type": "color",
                                         "value": "#fc8003"
                                     },
-                                    "name": "adsdas",
+                                    
                                     "text": "HDD"
                                 },
                                 {
@@ -498,11 +498,11 @@
                                         "value": "#b0aca9"
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "width": 271
                                 }
                             ],
-                            "name": "adsdas",
+                            
                             "spacing": 5
                         },
                         {
@@ -512,7 +512,7 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Windows"
                                 },
                                 {
@@ -524,7 +524,7 @@
                                         "free": {
                                             "_": "CommandLineDataModel",
                                             "command": "df /run/media/kwan/Windows/ | grep /dev/nvme0n1p3 | awk ' {print $3 }'",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -534,7 +534,7 @@
                                         "total": {
                                             "_": "CommandLineDataModel",
                                             "command": "df /run/media/kwan/Windows/ | grep /dev/nvme0n1p3 | awk ' {print $2 }'",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -543,7 +543,7 @@
                                         }
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return dataModels.free.currentValue+  \" / \" + dataModels.total.currentValue"
@@ -559,7 +559,7 @@
                                         "free": {
                                             "_": "CommandLineDataModel",
                                             "command": "df /run/media/kwan/Windows/ | grep /dev/nvme0n1p3 | awk ' {print $5 }'",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -568,7 +568,7 @@
                                         }
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "spacing": 50,
                                     "text": {
                                         "type": "bind",
@@ -577,7 +577,7 @@
                                     "width": 248
                                 }
                             ],
-                            "name": "adsdas",
+                            
                             "spacing": 45
                         },
                         {
@@ -589,7 +589,7 @@
                                 "free": {
                                     "_": "CommandLineDataModel",
                                     "command": "df /run/media/kwan/Windows/ | grep /dev/nvme0n1p3 | awk ' {print $5 }'",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -598,7 +598,7 @@
                                 }
                             },
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "to": 100,
                             "value": {
                                 "type": "bind",
@@ -613,7 +613,7 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Linux"
                                 },
                                 {
@@ -625,7 +625,7 @@
                                         "free": {
                                             "_": "CommandLineDataModel",
                                             "command": "df / | grep /dev/nvme0n1p6 | awk ' {print $3 }'",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -635,7 +635,7 @@
                                         "total": {
                                             "_": "CommandLineDataModel",
                                             "command": "df / | grep /dev/nvme0n1p6 | awk ' {print $2 }'",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -644,7 +644,7 @@
                                         }
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return dataModels.free.currentValue+  \" / \" + dataModels.total.currentValue"
@@ -660,7 +660,7 @@
                                         "free": {
                                             "_": "CommandLineDataModel",
                                             "command": "df / | grep /dev/nvme0n1p6 | awk ' {print $5 }'",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
@@ -669,7 +669,7 @@
                                         }
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "spacing": 50,
                                     "text": {
                                         "type": "bind",
@@ -678,7 +678,7 @@
                                     "width": 248
                                 }
                             ],
-                            "name": "adsdas",
+                            
                             "spacing": 45
                         },
                         {
@@ -690,7 +690,7 @@
                                 "free": {
                                     "_": "CommandLineDataModel",
                                     "command": "df / | grep /dev/nvme0n1p6 | awk ' {print $5 }'",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -699,7 +699,7 @@
                                 }
                             },
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "to": 100,
                             "value": {
                                 "type": "bind",
@@ -708,7 +708,7 @@
                             "width": 300
                         }
                     ],
-                    "name": "adsdas",
+                    
                     "spacing": 5,
                     "topPadding": 15
                 }
@@ -718,7 +718,7 @@
                 "value": "white"
             },
             "height": 300,
-            "name": "adsdas",
+            
             "spacing": 5,
             "visible": true,
             "width": 300
@@ -744,7 +744,7 @@
                                         "type": "color",
                                         "value": "#fc8003"
                                     },
-                                    "name": "adsdas",
+                                    
                                     "text": "System"
                                 },
                                 {
@@ -757,11 +757,11 @@
                                         "value": "#b0aca9"
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "width": 255
                                 }
                             ],
-                            "name": "adsdas",
+                            
                             "spacing": 5
                         },
                         {
@@ -777,15 +777,15 @@
                                         "valueModel": {
                                             "_": "CommandLineDataModel",
                                             "command": "head -1 /etc/manjaro-release",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
                                                 "value": "(value) => {return value.toString().trim()}"
                                             }
                                         }
-                                    },
-                                    "name": "adsdas"
+                                    }
+                                    
                                 },
                                 {
                                     "_": "Text",
@@ -795,20 +795,20 @@
                                         "valueModel": {
                                             "_": "CommandLineDataModel",
                                             "command": "uname -m",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
                                                 "value": "(value) => {return value.toString().trim()}"
                                             }
                                         }
-                                    },
-                                    "name": "adsdas"
+                                    }
+                                    
                                 }
                             ],
                             "color": "transparent",
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "spacing": 175
                         },
                         {
@@ -818,19 +818,19 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "AMD Ryzen 5"
                                 },
                                 {
                                     "_": "Text",
                                     "childern": [
-                                    ],
-                                    "name": "adsdas"
+                                    ]
+                                    
                                 }
                             ],
                             "color": "transparent",
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "spacing": 190
                         },
                         {
@@ -840,7 +840,7 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "FileSystem"
                                 },
                                 {
@@ -851,20 +851,20 @@
                                         "valueModel": {
                                             "_": "CommandLineDataModel",
                                             "command": "df -Th | grep \"^/dev/nvme0n1p6\" | awk '{print $2}'",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
                                                 "value": "(value) => {return  value.toString().trim()}"
                                             }
                                         }
-                                    },
-                                    "name": "adsdas"
+                                    }
+                                    
                                 }
                             ],
                             "color": "transparent",
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "spacing": 212
                         },
                         {
@@ -874,7 +874,7 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Uptime"
                                 },
                                 {
@@ -885,20 +885,20 @@
                                         "valueModel": {
                                             "_": "CommandLineDataModel",
                                             "command": "awk '{print int($1/3600)\":\"int(($1%3600)/60)\":\"int($1%60)}' /proc/uptime",
-                                            "name": "asdasd",
+                                            
                                             "timerInterval": 1000,
                                             "transformFunc": {
                                                 "type": "function",
                                                 "value": "(value) => {return  value.toString().trim()}"
                                             }
                                         }
-                                    },
-                                    "name": "adsdas"
+                                    }
+                                    
                                 }
                             ],
                             "color": "transparent",
                             "height": 10,
-                            "name": "adsdas",
+                            
                             "spacing": 213
                         },
                         {
@@ -912,7 +912,7 @@
                                         "type": "color",
                                         "value": "#fc8003"
                                     },
-                                    "name": "adsdas",
+                                    
                                     "text": "Processors"
                                 },
                                 {
@@ -925,11 +925,11 @@
                                         "value": "#b0aca9"
                                     },
                                     "height": 2,
-                                    "name": "adsdas",
+                                    
                                     "width": 233
                                 }
                             ],
-                            "name": "adsdas",
+                            
                             "spacing": 5
                         },
                         {
@@ -939,14 +939,14 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Core1"
                                 },
                                 {
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue.toString() + \" %\""
@@ -957,7 +957,7 @@
                                     "childern": [
                                     ],
                                     "implicitWidth": 220,
-                                    "name": "adsdas",
+                                    
                                     "value": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue/100"
@@ -969,7 +969,7 @@
                                 "valueModel": {
                                     "_": "SingleCpuCoreUtilisationDataModel",
                                     "acpiId": "1",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -977,8 +977,8 @@
                                     }
                                 }
                             },
-                            "height": 10,
-                            "name": "adsdas"
+                            "height": 10
+                            
                         },
                         {
                             "_": "Row",
@@ -987,14 +987,14 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Core2"
                                 },
                                 {
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue.toString() + \" %\""
@@ -1006,7 +1006,7 @@
                                     "childern": [
                                     ],
                                     "implicitWidth": 220,
-                                    "name": "adsdas",
+                                    
                                     "value": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue/100"
@@ -1018,7 +1018,7 @@
                                 "valueModel": {
                                     "_": "SingleCpuCoreUtilisationDataModel",
                                     "acpiId": "2",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -1026,8 +1026,8 @@
                                     }
                                 }
                             },
-                            "height": 10,
-                            "name": "adsdas"
+                            "height": 10
+                            
                         },
                         {
                             "_": "Row",
@@ -1036,14 +1036,14 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Core3"
                                 },
                                 {
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue.toString() + \" %\""
@@ -1055,7 +1055,7 @@
                                     "childern": [
                                     ],
                                     "implicitWidth": 220,
-                                    "name": "adsdas",
+                                    
                                     "value": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue/100"
@@ -1067,7 +1067,7 @@
                                 "valueModel": {
                                     "_": "SingleCpuCoreUtilisationDataModel",
                                     "acpiId": "3",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -1075,8 +1075,8 @@
                                     }
                                 }
                             },
-                            "height": 10,
-                            "name": "adsdas"
+                            "height": 10
+                            
                         },
                         {
                             "_": "Row",
@@ -1085,14 +1085,14 @@
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": "Core4"
                                 },
                                 {
                                     "_": "Text",
                                     "childern": [
                                     ],
-                                    "name": "adsdas",
+                                    
                                     "text": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue.toString() + \" %\""
@@ -1104,7 +1104,7 @@
                                     "childern": [
                                     ],
                                     "implicitWidth": 220,
-                                    "name": "adsdas",
+                                    
                                     "value": {
                                         "type": "bind",
                                         "value": "return parent.dataModels.valueModel.currentValue/100"
@@ -1116,7 +1116,7 @@
                                 "valueModel": {
                                     "_": "SingleCpuCoreUtilisationDataModel",
                                     "acpiId": "4",
-                                    "name": "asdasd",
+                                    
                                     "timerInterval": 1000,
                                     "transformFunc": {
                                         "type": "function",
@@ -1124,11 +1124,11 @@
                                     }
                                 }
                             },
-                            "height": 10,
-                            "name": "adsdas"
+                            "height": 10
+                            
                         }
                     ],
-                    "name": "adsdas",
+                    
                     "spacing": 5,
                     "topPadding": 15
                 }
@@ -1138,7 +1138,7 @@
                 "value": "white"
             },
             "height": 200,
-            "name": "adsdas",
+            
             "spacing": 5,
             "visible": true,
             "width": 350
