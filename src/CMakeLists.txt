@@ -18,7 +18,7 @@ add_custom_command(
         $<TARGET_FILE_DIR:AwesomeMonitor>/qmldir
 )
 
-add_custom_command(TARGET AwesomeMonitor POST_BUILD WORKING_DIRECTORY ../jsonEditor COMMAND npm install COMMAND npm run-script build)
+##add_custom_command(TARGET AwesomeMonitor POST_BUILD WORKING_DIRECTORY ../jsonEditor COMMAND npm install COMMAND npm run-script build)
 
 set(URI AwesomeMonitor)
 string(REPLACE "." "/" TARGETPATH ${URI})
