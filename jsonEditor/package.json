@@ -4,10 +4,11 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "react-scripts": "^4.0.3",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@json-editor/json-editor": "^2.5.1",
-    "qwebchannel": "^5.9.0"
+    "qwebchannel": "^5.9.0",
+    "react-scripts": "^4.0.3",
+    "spectre.css": "^0.5.9"
   },
   "scripts": {
     "start": "BROWSER='google-chrome-stable' react-scripts start",

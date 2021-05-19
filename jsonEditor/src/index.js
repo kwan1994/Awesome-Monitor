@@ -1,5 +1,5 @@
 import * as edit from "@json-editor/json-editor"
-import *  as Qt from "qwebchannel"
+import *  as Qt from "./qwebchannel"
 import "spectre.css"
 import "@fortawesome/fontawesome-free/js/all"
 
