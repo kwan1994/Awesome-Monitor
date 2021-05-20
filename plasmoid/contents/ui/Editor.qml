@@ -5,7 +5,6 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as Qt2
 import QtWebEngine 1.10
 import QtWebChannel 1.15
-import QtWebView 1.15
 import AwesomeMonitor 1.0
 import QtQuick.Controls 1.4 as Qt1
 import QtQml.Models 2.15
