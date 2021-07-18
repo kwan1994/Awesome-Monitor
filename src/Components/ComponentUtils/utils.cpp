@@ -4,7 +4,6 @@
 
 #include "utils.h"
 
-#include <wordexp.h>
 
 #include <QDebug>
 #include <QDir>
@@ -13,11 +12,9 @@
 #include <QtCore/QFile>
 #include <QtCore/QMap>
 #include <QtCore/QStandardPaths>
-#include <filesystem>
 #include <iostream>
 
 using namespace std;
-using namespace std::filesystem;
 
 QQmlEngine* Utils::qjsEngine = nullptr;
 QSettings Utils::settings = QSettings(

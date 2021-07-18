@@ -7,6 +7,7 @@
 #include "ComponentFramework/JsonToTreeParser/JsonToTreeParser.h"
 #include "Components/ComponentUtils/utils.h"
 
+
 Plugin::Plugin(QObject *parent) : QObject(parent) {
   imageProvider = new ImageProvider();
   connect(this, &Plugin::intializing,
@@ -17,6 +18,7 @@ Plugin::Plugin(QObject *parent) : QObject(parent) {
 }
 
 bool Plugin::saveToFile(QJsonObject json) {
+  QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
   QFile file(QFileInfo(Utils::getModelFileSetting()).absoluteFilePath());
   if (!file.open(QIODevice::ReadWrite | QIODevice::Truncate |
                  QIODevice::Text)) {
@@ -36,6 +38,8 @@ void Plugin::initializePlugin() {
   auto modelFile = Utils::getModelFileSetting();
   auto dataModelsFolder = Utils::getDataModelsFolderSetting();
   auto baseComponentsFolder = Utils::getBasicComponentFolder();
+
+  qDebug() << baseComponentsFolder << " " << dataModelsFolder << " " << modelFile;
 
   JsonToTreeParser s(dataModelsFolder, baseComponentsFolder,
                      JsonValueConverter());

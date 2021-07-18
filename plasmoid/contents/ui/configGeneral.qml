@@ -36,6 +36,11 @@ Item {
        property alias dataModelsFolder: dataModelsFolder.text
        property alias modelFile: modelFile.text
        property alias timerInterval: timerInterval.value
+       Component.onCompleted: {
+           console.log(settings.value("basicComponentsFolder"));
+           console.log(settings.value("modelFile"));
+           console.log(settings.value("dataModelsFolder"));
+       }
     }
 
     FileDialog {

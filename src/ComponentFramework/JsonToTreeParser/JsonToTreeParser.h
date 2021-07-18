@@ -4,14 +4,11 @@
 #ifndef AWESOMEMONITOR_JSONTOTREEPARSER_H
 #define AWESOMEMONITOR_JSONTOTREEPARSER_H
 
-#include <rapidjson/schema.h>
 
 #include <QtCore>
 #include <QtQml/QQmlContext>
 #include <QtQml/QQmlEngine>
 #include <QtQml/QQmlPropertyMap>
-#include <boost/filesystem.hpp>
-#include <boost/filesystem/fstream.hpp>
 #include <nlohmann/json-schema.hpp>
 #include <nlohmann/json.hpp>
 #include <string>

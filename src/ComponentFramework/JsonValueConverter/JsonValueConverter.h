@@ -5,9 +5,6 @@
 #ifndef AWESOMEMONITOR_JSONVALUECONVERTER_H
 #define AWESOMEMONITOR_JSONVALUECONVERTER_H
 
-#include <rapidjson/document.h>
-#include <rapidjson/rapidjson.h>
-
 #include <QtCore/QVariant>
 #include <QtQml/QQmlEngine>
 #include <nlohmann/json.hpp>

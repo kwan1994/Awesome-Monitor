@@ -17,6 +17,7 @@
 #include <sstream>
 #include <string>
 #include <variant>
+#include <QDebug>
 
 // TODO a.obrtel: create separate context for each component into which we
 // inject corresponding data models for component
@@ -38,7 +39,7 @@ JsonToTreeParser::JsonToTreeParser(QString directoryOfDataModelDefinitions,
 Model *JsonToTreeParser::createModelFromFile(QString pathToModel) {
   engine->installExtensions(QQmlEngine::AllExtensions);
   QFile file(pathToModel);
-
+  qDebug() << pathToModel;
   if (!file.exists()) throw;
 
   if (!file.open(QFile::OpenModeFlag::ReadOnly)) throw;

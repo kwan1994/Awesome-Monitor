@@ -9,7 +9,6 @@
 #include <QtCore/QAbstractItemModel>
 #include <QtCore/QFileSystemWatcher>
 #include <QtCore/QJsonParseError>
-#include <boost/filesystem/path.hpp>
 class TreeItem;
 
 using namespace std;
