@@ -20,18 +20,19 @@ add_custom_command(
 
 ##add_custom_command(TARGET AwesomeMonitor POST_BUILD WORKING_DIRECTORY ../jsonEditor COMMAND npm install COMMAND npm run-script build)
 
-set(URI AwesomeMonitor)
-string(REPLACE "." "/" TARGETPATH ${URI})
-execute_process(COMMAND qmake -query QT_INSTALL_QML OUTPUT_VARIABLE QT_INSTALL_QML_RAW)
-string(REPLACE "\n" "" QT_INSTALL_QML ${QT_INSTALL_QML_RAW})
-set(DESTDIR "${QT_INSTALL_QML}/${TARGETPATH}")
+set(DESTDIR "${CMAKE_INSTALL_PREFIX}/libs/AwesomeMonitor/")
 install(TARGETS AwesomeMonitor DESTINATION ${DESTDIR})
 install(FILES qmldir plugins.qmltypes DESTINATION ${DESTDIR})
 
 install(FILES ComponentFramework/JsonToTreeParser/errorComponent.qml
         DESTINATION $ENV{HOME}/.config/AwesomeMonitor)
+
+install(FILES Components/ComponentUtils/defaultJavascriptTransformers.mjs  DESTINATION $ENV{HOME}/.config)
+
 install(DIRECTORY ../defaultConfig/
         DESTINATION $ENV{HOME}/.config/AwesomeMonitor )
+
+message(${CMAKE_INSTALL_PREFIX} )
 
 add_subdirectory(Editor)
 add_subdirectory(ComponentFramework)

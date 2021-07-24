@@ -8,7 +8,7 @@ X-KDE-ServiceTypes=Plasma/Applet
 
 X-KDE-PluginInfo-Author=Adam Obrtel
 X-KDE-PluginInfo-Email=kwan@gmail.com
-X-KDE-PluginInfo-Name=AwesomeMonitor
+X-KDE-PluginInfo-Name=org.kwan.AwesomeMonitor
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=https://plasma.kde.org/
 X-KDE-PluginInfo-Category=Utilities

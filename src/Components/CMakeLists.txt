@@ -97,12 +97,13 @@ add_custom_command(
         $<TARGET_FILE_DIR:awesomeComponentsPlugin>/qmldir
 )
 
-install(FILES ComponentUtils/defaultJavascriptTransformers.mjs  DESTINATION ~/.config)
+
 
 set(URI AwesomeComponents)
+message("$ENV{QML2_IMPORT_PATH}")
 string(REPLACE "." "/" TARGETPATH ${URI})
 execute_process(COMMAND qmake -query QT_INSTALL_QML OUTPUT_VARIABLE QT_INSTALL_QML_RAW)
 string(REPLACE "\n" "" QT_INSTALL_QML ${QT_INSTALL_QML_RAW})
-set(DESTDIR "${QT_INSTALL_QML}/${TARGETPATH}")
+set(DESTDIR "${CMAKE_INSTALL_PREFIX}/libs/AwesomeComponents/")
 install(TARGETS awesomeComponentsPlugin DESTINATION ${DESTDIR})
 install(FILES qmldir plugins.qmltypes DESTINATION ${DESTDIR})

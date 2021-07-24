@@ -1,5 +1,5 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 import Qt.labs.settings 1.0
 import org.kde.kirigami 2.9 as Kirigami
 import Qt.labs.platform 1.1

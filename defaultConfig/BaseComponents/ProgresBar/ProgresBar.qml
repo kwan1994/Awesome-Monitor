@@ -1,5 +1,5 @@
-import QtQuick.Controls 2.5
-import QtQuick 2.1
+import QtQuick.Controls 2.14
+import QtQuick 2.14
 
 ProgressBar {
     id:me

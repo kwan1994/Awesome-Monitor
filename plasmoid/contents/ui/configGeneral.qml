@@ -1,11 +1,10 @@
-import QtQuick 2.13
+import QtQuick 2.14
 import QtQuick.Controls 1.4
-import QtQuick.Controls 2.15 as Qt2
+import QtQuick.Controls 2.14 as Qt2
 import org.kde.kirigami 2.5 as Kirigami
 import QtQuick.Dialogs 1.3
 import Qt.labs.platform 1.1 as Platform
 import Qt.labs.settings 1.0
-//import org.kde.plasma.plasmoid 2.0
 import AwesomeMonitor 1.0
 import QtQuick.Layouts 1.15
 
@@ -15,7 +14,7 @@ Item {
 
     //property Component editor: Qt.createComponent("Editor.qml")
     property int textFieldWidth: 500
-    property var changed: false
+    property bool changed: false
 
 
     function urlToPath(urlString) {
@@ -32,7 +31,7 @@ Item {
     Settings {
        fileName: Platform.StandardPaths.locate(Platform.StandardPaths.ConfigLocation,"AwesomeMonitor/AwesomeMonitor",Platform.StandardPaths.LocateFile).toString().substring(7)
        id: settings;
-       property alias basicComponents: basicComponentsFolder.text
+       property alias basicComponentsFolder: basicComponentsFolder.text
        property alias dataModelsFolder: dataModelsFolder.text
        property alias modelFile: modelFile.text
        property alias timerInterval: timerInterval.value
@@ -193,10 +192,12 @@ Item {
     }
     Component.onDestruction:  {
         console.log(settings.fileName);
-        settings.setValue("basicComponentsFolder",basicComponentsFolder.text)
-        settings.setValue("timerInterval",timerInterval.value);
-        settings.setValue("dataModelsFolder",dataModelsFolder.text);
-        settings.setValue("modelFile",modelFile.text);
+        if(changed) {
+            settings.setValue("basicComponentsFolder",basicComponentsFolder.text)
+            settings.setValue("timerInterval",timerInterval.value);
+            settings.setValue("dataModelsFolder",dataModelsFolder.text);
+            settings.setValue("modelFile",modelFile.text);
+        }
         console.log(settings.fileName)
 
         if(changed)plasmoid.action("reset").trigger();
