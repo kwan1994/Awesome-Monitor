@@ -1,10 +1,10 @@
 import QtQuick 2.14
 import QtQuick.Dialogs 1.3
 import QtGraphicalEffects 1.13
-import QtQuick.Layouts 1.15
+import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14 as Qt2
 import QtWebEngine 1.10
-import QtWebChannel 1.15
+import QtWebChannel 1.14
 import AwesomeMonitor 1.0
 import QtQuick.Controls 1.4 as Qt1
 import QtQml.Models 2.14

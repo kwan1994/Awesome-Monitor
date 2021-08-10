@@ -6,7 +6,7 @@ import QtQuick.Dialogs 1.3
 import Qt.labs.platform 1.1 as Platform
 import Qt.labs.settings 1.0
 import AwesomeMonitor 1.0
-import QtQuick.Layouts 1.15
+import QtQuick.Layouts 1.14
 
 Item {
     id:root
