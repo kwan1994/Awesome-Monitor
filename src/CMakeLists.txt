@@ -20,7 +20,7 @@ add_custom_command(
 
 ##add_custom_command(TARGET AwesomeMonitor POST_BUILD WORKING_DIRECTORY ../jsonEditor COMMAND npm install COMMAND npm run-script build)
 
-set(DESTDIR "${CMAKE_INSTALL_PREFIX}/lib/qml/")
+set(DESTDIR "${CMAKE_INSTALL_PREFIX}/lib/qml/AwesomeMonitor")
 install(TARGETS AwesomeMonitor DESTINATION ${DESTDIR})
 install(FILES qmldir plugins.qmltypes DESTINATION ${DESTDIR})
 install(FILES ../plasmoid/contents/config/generalSettingsIcon.svg DESTINATION $ENV{HOME}/.local/share/icons )
