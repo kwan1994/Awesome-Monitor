@@ -171,6 +171,7 @@ Qt2.ApplicationWindow {
                         Plugin.deletePlugin();
                         closeDialog.close()
                         window.hide();
+                        plasmoid.action("reset").trigger();
                     }
                 }
 
@@ -359,7 +360,7 @@ Qt2.ApplicationWindow {
 
 
 
-                        reuseItems: true
+
                         //implicitWidth: list.contentWidth
                         //list
                         Qt2.SplitView.preferredHeight: Math.min(contentHeight,700)
@@ -802,7 +803,7 @@ Qt2.ApplicationWindow {
                     Plugin.deletePlugin();
                     console.log(JSON.stringify(treeModel.getJsonModelRepresentation()));
                     Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
-                    web.reload();
+                    someObject.formDataChanged(item.schemaForm,item.formData);
                     isChanged = true;
 
                 }

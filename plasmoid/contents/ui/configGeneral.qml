@@ -178,6 +178,7 @@ Item {
                         console.log("sda",editor,editor.errorString());
                         win = editor.createObject(root);
                         console.log("asdas",win);
+                        changed = true;
                         win.show();
                 }
                 iconSource: "../icons/editor.svg"

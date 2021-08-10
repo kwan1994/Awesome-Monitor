@@ -99,11 +99,6 @@ add_custom_command(
 
 
 
-set(URI AwesomeComponents)
-message("$ENV{QML2_IMPORT_PATH}")
-string(REPLACE "." "/" TARGETPATH ${URI})
-execute_process(COMMAND qmake -query QT_INSTALL_QML OUTPUT_VARIABLE QT_INSTALL_QML_RAW)
-string(REPLACE "\n" "" QT_INSTALL_QML ${QT_INSTALL_QML_RAW})
-set(DESTDIR "${CMAKE_INSTALL_PREFIX}/libs/AwesomeComponents/")
+set(DESTDIR "${CMAKE_INSTALL_PREFIX}/lib/qml/AwesomeComponents/")
 install(TARGETS awesomeComponentsPlugin DESTINATION ${DESTDIR})
 install(FILES qmldir plugins.qmltypes DESTINATION ${DESTDIR})
