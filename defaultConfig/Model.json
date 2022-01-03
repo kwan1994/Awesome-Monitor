@@ -239,7 +239,7 @@
                   "dataModels": {
                     "valueModel": {
                       "_": "SingleCpuCoreUtilisationDataModel",
-                      "acpiId": "4",
+                      "acpiId": "0",
                       "timerInterval": 1000,
                       "transformFunc": {
                         "type": "function",

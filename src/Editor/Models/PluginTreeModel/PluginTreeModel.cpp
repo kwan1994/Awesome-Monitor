@@ -349,10 +349,17 @@ bool PluginTreeModel::removeRows(int row, int count,
 }
 
 bool PluginTreeModel::moveRows(const QModelIndex &sourceParent, int sourceRow,
-                               int count, const QModelIndex &destinationParent,
+                               int lastRow, const QModelIndex &destinationParent,
                                int destinationChild) {
-  return QAbstractItemModel::moveRows(sourceParent, sourceRow, count,
-                                      destinationParent, destinationChild);
+  if(lastRow != sourceRow) return false;
+  if(sourceParent != destinationParent) return false;
+  if(destinationChild < 0) return false;
+  auto parentItem = getItem(sourceParent);
+  if(destinationChild >= parentItem->childCount()) return false;
+  beginMoveRows(sourceParent,sourceRow,sourceRow,destinationParent,destinationChild > sourceRow?destinationChild+1:destinationChild);
+  parentItem->childItems.swapItemsAt(sourceRow,destinationChild);
+  endMoveRows();
+  return true;
 }
 
 QJsonObject PluginTreeModel::getJsonModelRepresentation() {

@@ -97,7 +97,7 @@ Qt2.ApplicationWindow {
                     text: "Add"
                     onClicked: {
                         let compListItem = list.model.data(list.model.index(list.currentIndex,0));
-                        treeModel.insertRow(0,tree.currentIndex,compListItem.schemaPath,addDataModelDialog.name);
+                        treeModel.insertRow(0,selectionModel.currentIndex,compListItem.schemaPath,addDataModelDialog.name);
                         Plugin.deletePlugin();
                         Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
                         addDataModelDialog.close()
@@ -221,7 +221,7 @@ Qt2.ApplicationWindow {
         }
         anchors.fill: parent
         Rectangle{
-            Qt2.SplitView.minimumWidth: list.contentWidth,tree.contentItem.widt
+            Qt2.SplitView.minimumWidth: list.contentWidth
             color: Theme.viewBackgroundColor
             Qt2.SplitView.preferredWidth:220
             Qt2.SplitView {
@@ -248,6 +248,32 @@ Qt2.ApplicationWindow {
                         spacing: 20
                         anchors.centerIn: parent
                         Button{
+                            id:up
+                            enabled: selectionModel.currentIndex.valid
+                            ColorScope.inherit: false
+                            ColorScope.colorGroup: Theme.ButtonColorGroup
+                            FallBackIcon {
+                                id: iconUp
+                                active: false
+                                anchors.centerIn: parent
+                                height: 20
+                                width: 20
+                                source: "minus"
+                                fallBackSource: "../icons/up.svg"
+                            }
+
+                            onClicked: {
+                                if(tree.model.moveRows(tree.model.parent(selectionModel.currentIndex),selectionModel.currentIndex.row,selectionModel.currentIndex.row,tree.model.parent(selectionModel.currentIndex),selectionModel.currentIndex.row-1)){
+                                    Plugin.deletePlugin();
+                                    Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
+                                    isChanged = true;
+                                }
+                            }
+
+                            implicitWidth: 40
+                            implicitHeight: 25
+                        }
+                        Button{
                             id:del
                             enabled: selectionModel.currentIndex.valid
                             ColorScope.inherit: false
@@ -267,7 +293,7 @@ Qt2.ApplicationWindow {
                                 selectionModel.clearCurrentIndex();
                                 Plugin.deletePlugin();
                                 Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
-                                web.reload();
+                                someObject.formDataChanged({},{});
                                 isChanged = true;
                             }
 
@@ -282,7 +308,7 @@ Qt2.ApplicationWindow {
                                 let treeIndex = selectionModel.currentIndex;
                                 let listData;
                                 if(listIndex !== -1)
-                                 listData = list.model.data(list.model.index(listIndex,0));
+                                    listData = list.model.data(list.model.index(listIndex,0));
                                 let treeData = tree.model.data(treeIndex,256);
                                 return listIndex !== -1 && (treeIndex.valid)?!treeData.isDataModel() && listData.name !== "Window":listData.name === "Window";
                             }
@@ -314,6 +340,33 @@ Qt2.ApplicationWindow {
                                 source: "add"
                                 fallBackSource: "../icons/add.svg"
                             }
+                            implicitWidth: 40
+                            implicitHeight: 25
+                        }
+                        Button{
+                            id:down
+                            enabled: selectionModel.currentIndex.valid
+                            ColorScope.inherit: false
+                            ColorScope.colorGroup: Theme.ButtonColorGroup
+                            FallBackIcon {
+                                id: iconDown
+                                active: false
+                                anchors.centerIn: parent
+                                height: 20
+                                width: 20
+                                source: "minus"
+                                fallBackSource: "../icons/down.svg"
+                            }
+
+                            onClicked: {
+
+                                if(tree.model.moveRows(tree.model.parent(selectionModel.currentIndex),selectionModel.currentIndex.row,selectionModel.currentIndex.row,tree.model.parent(selectionModel.currentIndex),selectionModel.currentIndex.row+1)){
+                                    Plugin.deletePlugin();
+                                    Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
+                                    isChanged = true;
+                                }
+                            }
+
                             implicitWidth: 40
                             implicitHeight: 25
                         }
@@ -354,7 +407,7 @@ Qt2.ApplicationWindow {
 
                         height: parent.height
                         id:list
-                        property var longestText: 0
+                        property int longestText: 0
 
                         ColorScope.colorGroup: Theme.ViewColorGroup
 
@@ -491,7 +544,6 @@ Qt2.ApplicationWindow {
                     }
 
                     Qt1.TreeView{
-
                         frameVisible: false
                         id:tree
                         width: s.width - 35
@@ -505,19 +557,19 @@ Qt2.ApplicationWindow {
                             width: s.width - 35
                         }
 
-                       selection: ItemSelectionModel {
-                        id: selectionModel
-                        model: treeModel
+                        selection: ItemSelectionModel {
+                            id: selectionModel
+                            model: treeModel
 
-                        onCurrentIndexChanged: {
-                            if(currentIndex === tree.rootIndex){
-                                someObject.formDataChanged({},{});
-                            } else {
-                            let item = treeModel.data(currentIndex,256);
-                            someObject.formDataChanged(item.schemaForm,item.formData);
+                            onCurrentIndexChanged: {
+                                if(currentIndex === tree.rootIndex){
+                                    someObject.formDataChanged({},{});
+                                } else {
+                                    let item = treeModel.data(currentIndex,256);
+                                    someObject.formDataChanged(item.schemaForm,item.formData);
+                                }
                             }
                         }
-                       }
 
 
 
@@ -537,7 +589,7 @@ Qt2.ApplicationWindow {
 
                             }
 
-    
+
                             itemDelegate: Text {
 
                                 verticalAlignment: Text.AlignVCenter
@@ -545,7 +597,8 @@ Qt2.ApplicationWindow {
                                 //id: name
                                 text: styleData.value
 
-
+                                width: tree.parent.parent.width - 35
+                                elide: Text.ElideRight
                                 Plasma2.Highlight{
                                     opacity: 0.25
                                     visible: {selectionModel.currentIndex; return selectionModel.isSelected(styleData.index) || treeArea.containsMouse;}
@@ -805,7 +858,6 @@ Qt2.ApplicationWindow {
                     Plugin.initializePluginFromString(JSON.stringify(treeModel.getJsonModelRepresentation()));
                     someObject.formDataChanged(item.schemaForm,item.formData);
                     isChanged = true;
-
                 }
             }
 

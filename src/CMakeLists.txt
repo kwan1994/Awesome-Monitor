@@ -23,7 +23,7 @@ add_custom_command(
 set(DESTDIR "${CMAKE_INSTALL_PREFIX}/lib/qml/AwesomeMonitor/")
 install(TARGETS AwesomeMonitor DESTINATION ${DESTDIR})
 install(FILES qmldir plugins.qmltypes DESTINATION ${DESTDIR})
-install(FILES ../plasmoid/contents/config/generalSettingsIcon.svg DESTINATION $ENV{HOME}/.local/share/icons )
+install(FILES ../plasmoid/contents/config/generalSettingsIcon.svg ../plasmoid/contents/icons/plasmoidIcon.png DESTINATION $ENV{HOME}/.local/share/icons )
 install(FILES ComponentFramework/JsonToTreeParser/errorComponent.qml
         DESTINATION $ENV{HOME}/.config/AwesomeMonitor)
 

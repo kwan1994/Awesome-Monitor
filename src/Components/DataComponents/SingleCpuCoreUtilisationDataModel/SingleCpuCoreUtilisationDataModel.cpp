@@ -5,13 +5,15 @@
 #include "SingleCpuCoreUtilisationDataModel.h"
 #include <QDebug>
 #include <QtCore/QFile>
+#include <iostream>
 using namespace std;
 void SingleCpuCoreUtilisationDataModel::computeValue() {
   QFile file("/proc/stat");
 
   if (file.exists() && file.open(QFile::ReadOnly)) {
     QRegExp regex(QString("cpu%0 .*").arg(id));
-    regex.indexIn(QString(file.readAll()));
+    if(regex.indexIn(QString(file.readAll())) == -1)
+  {return;}
     auto line = regex.capturedTexts().first();
     auto values = regex.capturedTexts()
                       .first()

@@ -12,6 +12,7 @@ X-KDE-PluginInfo-Name=org.kwan.AwesomeMonitor
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=https://plasma.kde.org/
 X-KDE-PluginInfo-Category=Utilities
+Icon=AwesomeMonitor
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true

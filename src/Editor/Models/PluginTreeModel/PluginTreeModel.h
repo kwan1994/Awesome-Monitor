@@ -40,7 +40,7 @@ class PluginTreeModel : public QAbstractItemModel {
 
   Q_INVOKABLE bool removeRows(int row, int count,
                               const QModelIndex &parent) override;
-  bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count,
+  Q_INVOKABLE bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count,
                 const QModelIndex &destinationParent,
                 int destinationChild) override;
   Q_INVOKABLE bool insertRow(int row, const QModelIndex &parent,
