@@ -141,7 +141,7 @@ Item {
             }
             Button {
                 onClicked: {
-                    fileDialogModels.open()
+                    fileDialogComponents.open()
                 }
                 iconSource: "../icons/folderIcon.png"
             }
