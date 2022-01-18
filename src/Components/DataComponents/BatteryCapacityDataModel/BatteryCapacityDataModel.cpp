@@ -45,7 +45,7 @@ void BatteryCapacityDataModel::computeValue() {
     if (!file.open(QFile::ReadOnly)) continue;
     totalPercent += QString(file.readAll()).toInt();
   }
-  setCurrentValue(totalPercent / files.length());
+  setCurrentValue(totalPercent / (files.isEmpty()?0:files.length()), true);
 }
 
 QString BatteryCapacityDataModel::batteryName() { return _batteryName; }
