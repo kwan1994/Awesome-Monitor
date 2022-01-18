@@ -3,7 +3,7 @@
     "properties":{
     "_":{
          "enum":[
-            "FreeSwapSpaceDataModel"
+            "FreeMemoryDataModel"
          ]
     },
     "transformFunc":{
